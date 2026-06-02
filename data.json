@@ -2,9 +2,9 @@
   "reparaturPreise": {
     "Apple": {
       "iPhone 16 Pro / 16 Pro Max": {
-        "display": 189,
-        "akku": 149,
-        "charging": 149
+        "display": 150,
+        "akku": 100,
+        "charging": 23
       },
       "iPhone 15 / 15 Pro": {
         "display": 159,
