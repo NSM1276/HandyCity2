@@ -1,7 +1,6 @@
 import data from "@/data.json";
 import type { SiteData } from "@/lib/types";
 import Hero from "@/components/Hero";
-import ScrollPhone from "@/components/ScrollPhone";
 import BrandLogos from "@/components/BrandLogos";
 import Leistungen from "@/components/Leistungen";
 import Kostenrechner from "@/components/Kostenrechner";
@@ -17,8 +16,7 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <ScrollPhone />
-      <BrandLogos />
+<BrandLogos />
       <Leistungen />
       <Kostenrechner preise={siteData.reparaturPreise} />
       <Katalog produkte={siteData.produkte} />
