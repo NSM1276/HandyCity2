@@ -89,7 +89,7 @@
       "name": "iPhone 13 128GB",
       "preis": 349,
       "bild": "",
-      "hidden": true
+      "hidden": false
     },
     {
       "id": 2,
