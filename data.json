@@ -1,47 +1,228 @@
 {
   "reparaturPreise": {
     "Apple": {
-      "iPhone 16 Pro / 16 Pro Max": { "display": 189, "akku": 149, "charging": 149 },
-      "iPhone 15 / 15 Pro": { "display": 159, "akku": 139, "charging": 119 },
-      "iPhone 14 / 14 Pro": { "display": 179, "akku": 149, "charging": 149 },
-      "iPhone 13 / 13 Pro": { "display": 139, "akku": 139, "charging": 119 },
-      "iPhone 12 / 12 Pro": { "display": 119, "akku": 89, "charging": 89 }
+      "iPhone 16 Pro / 16 Pro Max": {
+        "display": 189,
+        "akku": 149,
+        "charging": 149
+      },
+      "iPhone 15 / 15 Pro": {
+        "display": 159,
+        "akku": 139,
+        "charging": 119
+      },
+      "iPhone 14 / 14 Pro": {
+        "display": 179,
+        "akku": 149,
+        "charging": 149
+      },
+      "iPhone 13 / 13 Pro": {
+        "display": 139,
+        "akku": 139,
+        "charging": 119
+      },
+      "iPhone 12 / 12 Pro": {
+        "display": 119,
+        "akku": 89,
+        "charging": 89
+      }
     },
     "Samsung": {
-      "Galaxy S24 / S24 Ultra": { "display": 249, "akku": 89, "charging": 69 },
-      "Galaxy S23 / S23 Ultra": { "display": 199, "akku": 79, "charging": 59 },
-      "Galaxy S22 / S22 Ultra": { "display": 169, "akku": 69, "charging": 59 },
-      "Galaxy A54 / A55": { "display": 119, "akku": 59, "charging": 49 },
-      "Galaxy A34 / A35": { "display": 99, "akku": 49, "charging": 39 }
+      "Galaxy S24 / S24 Ultra": {
+        "display": 249,
+        "akku": 89,
+        "charging": 69
+      },
+      "Galaxy S23 / S23 Ultra": {
+        "display": 199,
+        "akku": 79,
+        "charging": 59
+      },
+      "Galaxy S22 / S22 Ultra": {
+        "display": 169,
+        "akku": 69,
+        "charging": 59
+      },
+      "Galaxy A54 / A55": {
+        "display": 119,
+        "akku": 59,
+        "charging": 49
+      },
+      "Galaxy A34 / A35": {
+        "display": 99,
+        "akku": 49,
+        "charging": 39
+      }
     },
     "Xiaomi": {
-      "Xiaomi 14 / 14 Ultra": { "display": 159, "akku": 59, "charging": 49 },
-      "Xiaomi 13 / 13 Pro": { "display": 129, "akku": 49, "charging": 39 },
-      "Redmi Note 13 / 13 Pro": { "display": 99, "akku": 39, "charging": 29 },
-      "Redmi Note 12 / 12 Pro": { "display": 79, "akku": 39, "charging": 29 },
-      "Poco F5 / F6": { "display": 99, "akku": 39, "charging": 39 }
+      "Xiaomi 14 / 14 Ultra": {
+        "display": 159,
+        "akku": 59,
+        "charging": 49
+      },
+      "Xiaomi 13 / 13 Pro": {
+        "display": 129,
+        "akku": 49,
+        "charging": 39
+      },
+      "Redmi Note 13 / 13 Pro": {
+        "display": 99,
+        "akku": 39,
+        "charging": 29
+      },
+      "Redmi Note 12 / 12 Pro": {
+        "display": 79,
+        "akku": 39,
+        "charging": 29
+      },
+      "Poco F5 / F6": {
+        "display": 99,
+        "akku": 39,
+        "charging": 39
+      }
     }
   },
   "produkte": [
-    { "id": 1, "kategorie": "smartphone", "name": "iPhone 13 128GB", "preis": 349, "bild": "" },
-    { "id": 2, "kategorie": "smartphone", "name": "iPhone 12 64GB", "preis": 249, "bild": "" },
-    { "id": 3, "kategorie": "smartphone", "name": "Samsung Galaxy S22", "preis": 299, "bild": "" },
-    { "id": 4, "kategorie": "smartphone", "name": "Samsung Galaxy A54", "preis": 199, "bild": "" },
-    { "id": 5, "kategorie": "smartphone", "name": "Xiaomi Redmi Note 12", "preis": 149, "bild": "" },
-    { "id": 6, "kategorie": "smartphone", "name": "Samsung Galaxy S23", "preis": 399, "bild": "" },
-    { "id": 7, "kategorie": "smartphone", "name": "iPhone 14 128GB", "preis": 499, "bild": "" },
-    { "id": 8, "kategorie": "smartphone", "name": "Xiaomi 13", "preis": 279, "bild": "" },
-    { "id": 9, "kategorie": "smartphone", "name": "Samsung Galaxy A35", "preis": 179, "bild": "" },
-    { "id": 10, "kategorie": "smartphone", "name": "iPhone 11 64GB", "preis": 199, "bild": "" },
-    { "id": 11, "kategorie": "zubehoer", "name": "USB-C Kabel 1m", "preis": 9, "bild": "" },
-    { "id": 12, "kategorie": "zubehoer", "name": "iPhone Case transparent", "preis": 12, "bild": "" },
-    { "id": 13, "kategorie": "zubehoer", "name": "Samsung Case schwarz", "preis": 12, "bild": "" },
-    { "id": 14, "kategorie": "zubehoer", "name": "Schutzglas iPhone", "preis": 15, "bild": "" },
-    { "id": 15, "kategorie": "zubehoer", "name": "Schutzglas Samsung", "preis": 15, "bild": "" },
-    { "id": 16, "kategorie": "zubehoer", "name": "Bluetooth Kopfhörer", "preis": 29, "bild": "" },
-    { "id": 17, "kategorie": "zubehoer", "name": "20W Ladegerät USB-C", "preis": 19, "bild": "" },
-    { "id": 18, "kategorie": "zubehoer", "name": "Powerbank 10000mAh", "preis": 25, "bild": "" },
-    { "id": 19, "kategorie": "zubehoer", "name": "Lightning Kabel 1m", "preis": 9, "bild": "" },
-    { "id": 20, "kategorie": "zubehoer", "name": "Handyhalterung Auto", "preis": 14, "bild": "" }
+    {
+      "id": 1,
+      "kategorie": "smartphone",
+      "name": "iPhone 13 128GB",
+      "preis": 349,
+      "bild": "",
+      "hidden": true
+    },
+    {
+      "id": 2,
+      "kategorie": "smartphone",
+      "name": "iPhone 12 64GB",
+      "preis": 249,
+      "bild": ""
+    },
+    {
+      "id": 3,
+      "kategorie": "smartphone",
+      "name": "Samsung Galaxy S22",
+      "preis": 299,
+      "bild": ""
+    },
+    {
+      "id": 4,
+      "kategorie": "smartphone",
+      "name": "Samsung Galaxy A54",
+      "preis": 199,
+      "bild": ""
+    },
+    {
+      "id": 5,
+      "kategorie": "smartphone",
+      "name": "Xiaomi Redmi Note 12",
+      "preis": 149,
+      "bild": ""
+    },
+    {
+      "id": 6,
+      "kategorie": "smartphone",
+      "name": "Samsung Galaxy S23",
+      "preis": 399,
+      "bild": ""
+    },
+    {
+      "id": 7,
+      "kategorie": "smartphone",
+      "name": "iPhone 14 128GB",
+      "preis": 499,
+      "bild": ""
+    },
+    {
+      "id": 8,
+      "kategorie": "smartphone",
+      "name": "Xiaomi 13",
+      "preis": 279,
+      "bild": ""
+    },
+    {
+      "id": 9,
+      "kategorie": "smartphone",
+      "name": "Samsung Galaxy A35",
+      "preis": 179,
+      "bild": ""
+    },
+    {
+      "id": 10,
+      "kategorie": "smartphone",
+      "name": "iPhone 11 64GB",
+      "preis": 199,
+      "bild": ""
+    },
+    {
+      "id": 11,
+      "kategorie": "zubehoer",
+      "name": "USB-C Kabel 1m",
+      "preis": 9,
+      "bild": ""
+    },
+    {
+      "id": 12,
+      "kategorie": "zubehoer",
+      "name": "iPhone Case transparent",
+      "preis": 12,
+      "bild": ""
+    },
+    {
+      "id": 13,
+      "kategorie": "zubehoer",
+      "name": "Samsung Case schwarz",
+      "preis": 12,
+      "bild": ""
+    },
+    {
+      "id": 14,
+      "kategorie": "zubehoer",
+      "name": "Schutzglas iPhone",
+      "preis": 15,
+      "bild": ""
+    },
+    {
+      "id": 15,
+      "kategorie": "zubehoer",
+      "name": "Schutzglas Samsung",
+      "preis": 15,
+      "bild": ""
+    },
+    {
+      "id": 16,
+      "kategorie": "zubehoer",
+      "name": "Bluetooth Kopfhörer",
+      "preis": 29,
+      "bild": ""
+    },
+    {
+      "id": 17,
+      "kategorie": "zubehoer",
+      "name": "20W Ladegerät USB-C",
+      "preis": 19,
+      "bild": ""
+    },
+    {
+      "id": 18,
+      "kategorie": "zubehoer",
+      "name": "Powerbank 10000mAh",
+      "preis": 25,
+      "bild": ""
+    },
+    {
+      "id": 19,
+      "kategorie": "zubehoer",
+      "name": "Lightning Kabel 1m",
+      "preis": 9,
+      "bild": ""
+    },
+    {
+      "id": 20,
+      "kategorie": "zubehoer",
+      "name": "Handyhalterung Auto",
+      "preis": 14,
+      "bild": ""
+    }
   ]
 }
