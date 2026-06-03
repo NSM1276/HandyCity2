@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { WhatsAppIcon } from "./icons";
 import { waLink } from "@/lib/whatsapp";
+import { CONTACT_EMAIL } from "@/lib/config";
 
 const THEMEN = [
   "Display-Reparatur",
@@ -32,24 +33,15 @@ export default function Kontakt() {
     setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
   }
 
-  async function handleSubmit(e: React.FormEvent) {
+  function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    setStatus("sending");
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
-      });
-      if (res.ok) {
-        setStatus("success");
-        setForm({ name: "", telefon: "", email: "", thema: "", nachricht: "" });
-      } else {
-        setStatus("error");
-      }
-    } catch {
-      setStatus("error");
-    }
+    const subject = encodeURIComponent(`Kontaktanfrage: ${form.thema} — ${form.name}`);
+    const body = encodeURIComponent(
+      `Name: ${form.name}\nTelefon: ${form.telefon || "—"}\nE-Mail: ${form.email}\nAnliegen: ${form.thema}\n\nNachricht:\n${form.nachricht}`
+    );
+    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
+    setStatus("success");
+    setForm({ name: "", telefon: "", email: "", thema: "", nachricht: "" });
   }
 
   const inputClass =
