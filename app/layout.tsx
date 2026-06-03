@@ -28,6 +28,12 @@ export const metadata: Metadata = {
     locale: "de_AT",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Handy City 2 — Express Reparatur | Wien Meidling",
+    description:
+      "Express Handy-Reparatur, Ankauf & Verkauf. Meidlinger Hauptstraße 72, 1120 Wien.",
+  },
 };
 
 export default function RootLayout({
