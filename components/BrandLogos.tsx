@@ -1,3 +1,8 @@
+"use client";
+
+import { useRef, useEffect, useState } from "react";
+import { motion, useAnimationFrame, useMotionValue, useSpring, useInView } from "framer-motion";
+import useMeasure from "react-use-measure";
 import { GOOGLE_REVIEWS_URL } from "@/lib/config";
 import { GoogleIcon, StarIcon } from "./icons";
 import type { ReactNode } from "react";
@@ -97,7 +102,60 @@ const BRANDS: BrandChip[] = [
   },
 ];
 
-const DOUBLED = [...BRANDS, ...BRANDS];
+function InfiniteSlider({ items }: { items: BrandChip[] }) {
+  const [ref, { width }] = useMeasure();
+  const x = useMotionValue(0);
+  const hovering = useRef(false);
+
+  useAnimationFrame((_, delta) => {
+    if (!width) return;
+    const singleWidth = width / 2;
+    const speed = hovering.current ? 8 : 40;
+    const next = x.get() - (speed * delta) / 1000;
+    x.set(next <= -singleWidth ? next + singleWidth : next);
+  });
+
+  return (
+    <div
+      className="overflow-hidden"
+      onMouseEnter={() => (hovering.current = true)}
+      onMouseLeave={() => (hovering.current = false)}
+    >
+      <motion.div
+        ref={ref}
+        className="flex w-max items-center gap-12"
+        style={{ x }}
+      >
+        {items.map((brand) => (
+          <div key={`a-${brand.key}`} className="shrink-0">
+            {brand.content}
+          </div>
+        ))}
+        {items.map((brand) => (
+          <div key={`b-${brand.key}`} className="shrink-0">
+            {brand.content}
+          </div>
+        ))}
+      </motion.div>
+    </div>
+  );
+}
+
+function AnimatedRating({ value }: { value: number }) {
+  const ref = useRef<HTMLSpanElement>(null);
+  const isInView = useInView(ref, { once: true });
+  const motionVal = useMotionValue(0);
+  const spring = useSpring(motionVal, { duration: 1500, bounce: 0 });
+  const [display, setDisplay] = useState("0.0");
+
+  useEffect(() => spring.on("change", (v) => setDisplay(v.toFixed(1))), [spring]);
+
+  useEffect(() => {
+    if (isInView) motionVal.set(value);
+  }, [isInView, value, motionVal]);
+
+  return <span ref={ref}>{display}</span>;
+}
 
 export default function BrandLogos() {
   return (
@@ -106,15 +164,9 @@ export default function BrandLogos() {
         <div className="flex flex-col items-center gap-6 md:flex-row md:gap-10">
 
           <div className="relative w-full overflow-hidden md:flex-1">
-            <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-16 bg-gradient-to-r from-white to-transparent" />
-            <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-16 bg-gradient-to-l from-white to-transparent" />
-            <div className="flex animate-marquee items-center gap-12">
-              {DOUBLED.map((brand, i) => (
-                <div key={`${brand.key}-${i}`} className="shrink-0">
-                  {brand.content}
-                </div>
-              ))}
-            </div>
+            <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-20 bg-gradient-to-r from-white to-transparent" />
+            <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-20 bg-gradient-to-l from-white to-transparent" />
+            <InfiniteSlider items={BRANDS} />
           </div>
 
           <div className="hidden h-12 w-px shrink-0 bg-neutral-200 md:block" />
@@ -131,7 +183,9 @@ export default function BrandLogos() {
                 Google Reviews
               </p>
               <div className="mt-0.5 flex items-center gap-1.5">
-                <span className="text-xl font-black text-neutral-900">4.7</span>
+                <span className="text-xl font-black text-neutral-900">
+                  <AnimatedRating value={4.7} />
+                </span>
                 <div className="flex text-amber-400">
                   {Array.from({ length: 5 }).map((_, i) => (
                     <StarIcon key={i} className="h-4 w-4" />

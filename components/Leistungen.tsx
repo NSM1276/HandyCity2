@@ -1,3 +1,7 @@
+"use client";
+
+import type { ReactNode } from "react";
+import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import {
   DisplayIcon,
   BatteryIcon,
@@ -70,6 +74,44 @@ const SERVICES = [
   },
 ];
 
+// ─── 8. 3D Tilt Card ─────────────────────────────────────────────────────────
+function TiltCard({
+  children,
+  className,
+}: {
+  children: ReactNode;
+  className?: string;
+}) {
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+  const sx = useSpring(x, { stiffness: 300, damping: 30 });
+  const sy = useSpring(y, { stiffness: 300, damping: 30 });
+  const rotateX = useTransform(sy, [-0.5, 0.5], ["8deg", "-8deg"]);
+  const rotateY = useTransform(sx, [-0.5, 0.5], ["-8deg", "8deg"]);
+
+  const onMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const r = e.currentTarget.getBoundingClientRect();
+    x.set((e.clientX - r.left) / r.width - 0.5);
+    y.set((e.clientY - r.top) / r.height - 0.5);
+  };
+
+  return (
+    <div className="h-full [perspective:900px]">
+      <motion.div
+        style={{ rotateX, rotateY }}
+        onMouseMove={onMove}
+        onMouseLeave={() => {
+          x.set(0);
+          y.set(0);
+        }}
+        className={className}
+      >
+        {children}
+      </motion.div>
+    </div>
+  );
+}
+
 export default function Leistungen() {
   return (
     <section id="leistungen" className="bg-white py-20 md:py-28">
@@ -87,39 +129,55 @@ export default function Leistungen() {
         </div>
 
         <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {SERVICES.map(({ Icon, nr, titel, punkte }) => (
-            <div
+          {SERVICES.map(({ Icon, nr, titel, punkte }, i) => (
+            <motion.div
               key={nr}
-              className="group rounded-2xl border border-neutral-100 bg-surface p-6 transition hover:-translate-y-1 hover:border-accent/20 hover:shadow-xl"
+              initial={{ opacity: 0, y: 28 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{
+                duration: 0.4,
+                delay: i * 0.07,
+                ease: [0.4, 0, 0.2, 1],
+              }}
             >
-              <div className="flex items-start justify-between">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10">
-                  <Icon className="h-6 w-6 text-accent" />
+              <TiltCard className="group h-full rounded-2xl border border-neutral-100 bg-surface p-6 transition-[border-color,box-shadow] hover:border-accent/20 hover:shadow-xl">
+                <div className="flex items-start justify-between">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10">
+                    <Icon className="h-6 w-6 text-accent" />
+                  </div>
+                  <span className="select-none text-3xl font-black text-neutral-100">
+                    {nr}
+                  </span>
                 </div>
-                <span className="text-3xl font-black text-neutral-100 select-none">{nr}</span>
-              </div>
 
-              <h3 className="mt-4 text-lg font-bold text-neutral-900">{titel}</h3>
+                <h3 className="mt-4 text-lg font-bold text-neutral-900">
+                  {titel}
+                </h3>
 
-              <ul className="mt-3 space-y-1.5">
-                {punkte.map((p) => (
-                  <li key={p} className="flex items-start gap-2 text-sm text-neutral-600">
-                    <svg
-                      className="mt-0.5 h-4 w-4 shrink-0 text-accent"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
+                <ul className="mt-3 space-y-1.5">
+                  {punkte.map((p) => (
+                    <li
+                      key={p}
+                      className="flex items-start gap-2 text-sm text-neutral-600"
                     >
-                      <path
-                        fillRule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                    {p}
-                  </li>
-                ))}
-              </ul>
-            </div>
+                      <svg
+                        className="mt-0.5 h-4 w-4 shrink-0 text-accent"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                      {p}
+                    </li>
+                  ))}
+                </ul>
+              </TiltCard>
+            </motion.div>
           ))}
         </div>
       </div>

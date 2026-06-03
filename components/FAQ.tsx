@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 
 const FAQS = [
   {
@@ -9,7 +10,7 @@ const FAQS = [
   },
   {
     q: "Muss ich einen Termin vereinbaren?",
-    a: "Nein, kein Termin nötig! Komm einfach vorbei — Meidlinger Hauptstraße 29, 1120 Wien. Wir helfen dir sofort.",
+    a: "Nein, kein Termin nötig! Komm einfach vorbei — Meidlinger Hauptstraße 72, 1120 Wien. Wir helfen dir sofort.",
   },
   {
     q: "Wie viel kostet eine Display- oder Akkureparatur?",
@@ -66,11 +67,23 @@ export default function FAQ() {
                   </svg>
                 </span>
               </button>
-              {open === i && (
-                <div className="px-6 pb-5">
-                  <p className="text-neutral-600 leading-relaxed">{faq.a}</p>
-                </div>
-              )}
+
+              <AnimatePresence initial={false}>
+                {open === i && (
+                  <motion.div
+                    key="answer"
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.28, ease: [0.4, 0, 0.2, 1] }}
+                    className="overflow-hidden"
+                  >
+                    <div className="px-6 pb-5">
+                      <p className="text-neutral-600 leading-relaxed">{faq.a}</p>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
           ))}
         </div>
