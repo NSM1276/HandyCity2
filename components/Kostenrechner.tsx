@@ -10,9 +10,11 @@ const REPARATUR_LABELS: Record<Reparaturart, string> = {
   display: "Display",
   akku: "Akku",
   charging: "Ladebuchse",
+  kamera: "Kamera",
+  rueckglas: "Rückglas",
 };
 
-const REPARATUR_ARTEN: Reparaturart[] = ["display", "akku", "charging"];
+const REPARATUR_ARTEN: Reparaturart[] = ["display", "akku", "charging", "kamera", "rueckglas"];
 
 function BrandLogo({ brand, selected }: { brand: string; selected: boolean }) {
   if (brand === "Apple") {
@@ -248,7 +250,7 @@ export default function Kostenrechner({ preise }: { preise: ReparaturPreise }) {
               href={whatsappText ? waLink(whatsappText) : undefined}
               target="_blank"
               rel="noopener noreferrer"
-              aria-disabled={!whatsappText}
+              aria-disabled={!whatsappText ? "true" : "false"}
               className={`flex w-full items-center justify-center gap-2.5 rounded-xl px-6 py-4 text-base font-semibold transition-all duration-200 ${
                 whatsappText
                   ? "bg-accent text-white shadow-lg shadow-accent/20 hover:bg-red-700"

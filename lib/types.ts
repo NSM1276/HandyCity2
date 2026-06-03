@@ -13,6 +13,8 @@ export interface ReparaturPreis {
   display: number;
   akku: number;
   charging: number;
+  kamera: number;
+  rueckglas: number;
 }
 
 /** Marke -> Modell -> Preise */

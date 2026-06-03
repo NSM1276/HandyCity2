@@ -2,158 +2,98 @@
   "reparaturPreise": {
     "Apple": {
       "iPhone 16 Pro / 16 Pro Max": {
-        "display": 150,
-        "akku": 100,
-        "charging": 23
+        "display": 150, "akku": 100, "charging": 23, "kamera": 89, "rueckglas": 89
       },
       "iPhone 16 / 16 Plus": {
-        "display": 139,
-        "akku": 95,
-        "charging": 23
+        "display": 139, "akku": 95, "charging": 23, "kamera": 79, "rueckglas": 79
       },
       "iPhone 15 Pro / 15 Pro Max": {
-        "display": 159,
-        "akku": 139,
-        "charging": 119
+        "display": 159, "akku": 139, "charging": 119, "kamera": 79, "rueckglas": 79
       },
       "iPhone 15 / 15 Plus": {
-        "display": 149,
-        "akku": 129,
-        "charging": 109
+        "display": 149, "akku": 129, "charging": 109, "kamera": 69, "rueckglas": 69
       },
       "iPhone 14 Pro / 14 Pro Max": {
-        "display": 179,
-        "akku": 149,
-        "charging": 149
+        "display": 179, "akku": 149, "charging": 149, "kamera": 79, "rueckglas": 79
       },
       "iPhone 14 / 14 Plus": {
-        "display": 159,
-        "akku": 139,
-        "charging": 129
+        "display": 159, "akku": 139, "charging": 129, "kamera": 69, "rueckglas": 69
       },
       "iPhone 13 / 13 Pro": {
-        "display": 139,
-        "akku": 139,
-        "charging": 119
+        "display": 139, "akku": 139, "charging": 119, "kamera": 69, "rueckglas": 69
       },
       "iPhone 12 / 12 Pro": {
-        "display": 119,
-        "akku": 89,
-        "charging": 89
+        "display": 119, "akku": 89, "charging": 89, "kamera": 59, "rueckglas": 59
       },
       "iPhone 11 / 11 Pro": {
-        "display": 99,
-        "akku": 79,
-        "charging": 79
+        "display": 99, "akku": 79, "charging": 79, "kamera": 49, "rueckglas": 49
       },
       "iPhone XS / XR / X": {
-        "display": 89,
-        "akku": 69,
-        "charging": 69
+        "display": 89, "akku": 69, "charging": 69, "kamera": 45, "rueckglas": 45
       }
     },
     "Samsung": {
       "Galaxy S25 / S25 Ultra": {
-        "display": 269,
-        "akku": 99,
-        "charging": 79
+        "display": 269, "akku": 99, "charging": 79, "kamera": 99, "rueckglas": 89
       },
       "Galaxy S24 / S24 Ultra": {
-        "display": 249,
-        "akku": 89,
-        "charging": 69
+        "display": 249, "akku": 89, "charging": 69, "kamera": 89, "rueckglas": 79
       },
       "Galaxy S23 / S23 Ultra": {
-        "display": 199,
-        "akku": 79,
-        "charging": 59
+        "display": 199, "akku": 79, "charging": 59, "kamera": 79, "rueckglas": 69
       },
       "Galaxy S22 / S22 Ultra": {
-        "display": 169,
-        "akku": 69,
-        "charging": 59
+        "display": 169, "akku": 69, "charging": 59, "kamera": 69, "rueckglas": 59
       },
       "Galaxy S21 / S21 Ultra": {
-        "display": 149,
-        "akku": 59,
-        "charging": 49
+        "display": 149, "akku": 59, "charging": 49, "kamera": 59, "rueckglas": 49
       },
       "Galaxy A55 / A54": {
-        "display": 119,
-        "akku": 59,
-        "charging": 49
+        "display": 119, "akku": 59, "charging": 49, "kamera": 49, "rueckglas": 45
       },
       "Galaxy A35 / A34": {
-        "display": 99,
-        "akku": 49,
-        "charging": 39
+        "display": 99, "akku": 49, "charging": 39, "kamera": 39, "rueckglas": 35
       },
       "Galaxy A25 / A24": {
-        "display": 89,
-        "akku": 45,
-        "charging": 35
+        "display": 89, "akku": 45, "charging": 35, "kamera": 35, "rueckglas": 29
       },
       "Galaxy A15 / A14": {
-        "display": 79,
-        "akku": 39,
-        "charging": 29
+        "display": 79, "akku": 39, "charging": 29, "kamera": 29, "rueckglas": 25
       },
       "Galaxy M35 / M34": {
-        "display": 89,
-        "akku": 45,
-        "charging": 35
+        "display": 89, "akku": 45, "charging": 35, "kamera": 35, "rueckglas": 29
       }
     },
     "Xiaomi": {
       "Xiaomi 14 / 14 Ultra": {
-        "display": 159,
-        "akku": 59,
-        "charging": 49
+        "display": 159, "akku": 59, "charging": 49, "kamera": 59, "rueckglas": 49
       },
       "Xiaomi 13 / 13 Pro": {
-        "display": 129,
-        "akku": 49,
-        "charging": 39
+        "display": 129, "akku": 49, "charging": 39, "kamera": 49, "rueckglas": 45
       },
       "Xiaomi 12 / 12 Pro": {
-        "display": 109,
-        "akku": 45,
-        "charging": 35
+        "display": 109, "akku": 45, "charging": 35, "kamera": 45, "rueckglas": 39
       },
       "Redmi Note 13 / 13 Pro": {
-        "display": 99,
-        "akku": 39,
-        "charging": 29
+        "display": 99, "akku": 39, "charging": 29, "kamera": 39, "rueckglas": 35
       },
       "Redmi Note 12 / 12 Pro": {
-        "display": 79,
-        "akku": 39,
-        "charging": 29
+        "display": 79, "akku": 39, "charging": 29, "kamera": 35, "rueckglas": 29
       },
       "Redmi Note 11 / 11 Pro": {
-        "display": 69,
-        "akku": 35,
-        "charging": 25
+        "display": 69, "akku": 35, "charging": 25, "kamera": 29, "rueckglas": 25
       },
       "Redmi 13 / 13C": {
-        "display": 69,
-        "akku": 35,
-        "charging": 25
+        "display": 69, "akku": 35, "charging": 25, "kamera": 29, "rueckglas": 25
       },
       "Poco X6 / X5": {
-        "display": 99,
-        "akku": 39,
-        "charging": 35
+        "display": 99, "akku": 39, "charging": 35, "kamera": 39, "rueckglas": 35
       },
       "Poco F5 / F6": {
-        "display": 99,
-        "akku": 39,
-        "charging": 39
+        "display": 99, "akku": 39, "charging": 39, "kamera": 39, "rueckglas": 35
       },
       "Poco M5 / M6": {
-        "display": 79,
-        "akku": 35,
-        "charging": 29
+        "display": 79, "akku": 35, "charging": 29, "kamera": 29, "rueckglas": 25
       }
     }
   },

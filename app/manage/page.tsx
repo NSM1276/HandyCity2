@@ -10,6 +10,8 @@ const REPARATUR_LABELS: Record<Reparaturart, string> = {
   display: "Display",
   akku: "Akku",
   charging: "Ladebuchse",
+  kamera: "Kamera",
+  rueckglas: "Rückglas",
 };
 
 function clone(data: SiteData): SiteData {
@@ -218,93 +220,100 @@ export default function ManagePage() {
           <p className="mt-1 text-sm text-neutral-500">
             Name, Preis und Foto bearbeiten. Fotos werden automatisch komprimiert.
           </p>
-          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {data.produkte.map((p) => (
-              <div
-                key={p.id}
-                className={`rounded-2xl border p-4 transition ${p.hidden ? "border-neutral-200 bg-neutral-50 opacity-50" : "border-neutral-200 bg-white"}`}
-              >
-                <div className="mb-2 flex items-center justify-between">
-                  <span className="text-xs font-medium text-neutral-400">#{p.id}</span>
-                  <button
-                    type="button"
-                    onClick={() => toggleHidden(p.id)}
-                    className={`rounded-lg px-3 py-1 text-xs font-semibold transition ${p.hidden ? "bg-neutral-200 text-neutral-600 hover:bg-neutral-300" : "bg-red-50 text-accent hover:bg-red-100"}`}
-                  >
-                    {p.hidden ? "Einblenden" : "Ausblenden"}
-                  </button>
+
+          {(["smartphone", "zubehoer"] as const).map((kat) => {
+            const gruppe = data.produkte.filter((p) => p.kategorie === kat);
+            return (
+              <div key={kat} className="mt-8">
+                <h3 className="mb-4 text-sm font-semibold uppercase tracking-widest text-accent">
+                  {kat === "smartphone" ? "Smartphones" : "Zubehör"}
+                </h3>
+                <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                  {gruppe.map((p) => (
+                    <div
+                      key={p.id}
+                      className={`rounded-2xl border p-4 transition ${p.hidden ? "border-neutral-200 bg-neutral-50 opacity-50" : "border-neutral-200 bg-white"}`}
+                    >
+                      <div className="mb-2 flex items-center justify-between">
+                        <span className="text-xs font-medium text-neutral-400">#{p.id}</span>
+                        <button
+                          type="button"
+                          onClick={() => toggleHidden(p.id)}
+                          className={`rounded-lg px-3 py-1 text-xs font-semibold transition ${p.hidden ? "bg-neutral-200 text-neutral-600 hover:bg-neutral-300" : "bg-red-50 text-accent hover:bg-red-100"}`}
+                        >
+                          {p.hidden ? "Einblenden" : "Ausblenden"}
+                        </button>
+                      </div>
+                      <div className="relative mb-3 aspect-square overflow-hidden rounded-lg bg-surface">
+                        <Image
+                          src={p.bild || "/placeholder-phone.webp"}
+                          alt={p.name}
+                          fill
+                          sizes="200px"
+                          className="object-contain p-2"
+                        />
+                      </div>
+                      <label className="block text-xs font-medium text-neutral-500">Name</label>
+                      <input
+                        className={inputClass}
+                        value={p.name}
+                        placeholder="Produktname"
+                        onChange={(e) => updateProdukt(p.id, { name: e.target.value })}
+                      />
+                      <label className="mt-2 block text-xs font-medium text-neutral-500">Preis (€)</label>
+                      <input
+                        type="number"
+                        min={0}
+                        className={inputClass}
+                        value={p.preis}
+                        placeholder="0"
+                        onChange={(e) => updateProdukt(p.id, { preis: Number(e.target.value) })}
+                      />
+                      <label className="mt-3 block">
+                        <span className="text-xs font-medium text-neutral-500">Foto ersetzen</span>
+                        <input
+                          type="file"
+                          accept="image/*"
+                          disabled={uploadingId === p.id}
+                          onChange={(e) => {
+                            const f = e.target.files?.[0];
+                            if (f) handleImage(p.id, f);
+                            e.target.value = "";
+                          }}
+                          className="mt-1 block w-full text-xs file:mr-3 file:rounded-lg file:border-0 file:bg-accent file:px-3 file:py-1.5 file:text-white"
+                        />
+                      </label>
+                      {uploadingId === p.id && (
+                        <p className="mt-1 text-xs text-neutral-500">Lädt hoch…</p>
+                      )}
+                    </div>
+                  ))}
                 </div>
-                <div className="relative mb-3 aspect-square overflow-hidden rounded-lg bg-surface">
-                  <Image
-                    src={p.bild || "/placeholder-phone.webp"}
-                    alt={p.name}
-                    fill
-                    sizes="200px"
-                    className="object-contain p-2"
-                  />
-                </div>
-                <label className="block text-xs font-medium text-neutral-500">
-                  Name
-                </label>
-                <input
-                  className={inputClass}
-                  value={p.name}
-                  onChange={(e) => updateProdukt(p.id, { name: e.target.value })}
-                />
-                <label className="mt-2 block text-xs font-medium text-neutral-500">
-                  Preis (€)
-                </label>
-                <input
-                  type="number"
-                  min={0}
-                  className={inputClass}
-                  value={p.preis}
-                  onChange={(e) =>
-                    updateProdukt(p.id, { preis: Number(e.target.value) })
-                  }
-                />
-                <label className="mt-3 block">
-                  <span className="text-xs font-medium text-neutral-500">
-                    Foto ersetzen
-                  </span>
-                  <input
-                    type="file"
-                    accept="image/*"
-                    disabled={uploadingId === p.id}
-                    onChange={(e) => {
-                      const f = e.target.files?.[0];
-                      if (f) handleImage(p.id, f);
-                      e.target.value = "";
-                    }}
-                    className="mt-1 block w-full text-xs file:mr-3 file:rounded-lg file:border-0 file:bg-accent file:px-3 file:py-1.5 file:text-white"
-                  />
-                </label>
-                {uploadingId === p.id && (
-                  <p className="mt-1 text-xs text-neutral-500">Lädt hoch…</p>
-                )}
               </div>
-            ))}
-          </div>
+            );
+          })}
         </section>
 
         {/* Block 2 — Kostenrechner */}
         <section>
           <h2 className="text-xl font-bold">Reparatur-Preise</h2>
           <p className="mt-1 text-sm text-neutral-500">
-            Preise je Modell für Display, Akku und Ladebuchse.
+            Preise je Modell für alle 5 Reparaturarten.
           </p>
           <div className="mt-6 space-y-8">
             {Object.entries(data.reparaturPreise).map(([marke, modelle]) => (
               <div key={marke}>
                 <h3 className="mb-3 font-semibold text-accent">{marke}</h3>
                 <div className="overflow-x-auto rounded-2xl border border-neutral-200 bg-white">
-                  <table className="w-full min-w-[520px] text-sm">
+                  <table className="w-full min-w-[700px] text-sm">
                     <thead>
                       <tr className="border-b border-neutral-200 text-left text-xs uppercase text-neutral-500">
                         <th className="p-3">Modell</th>
                         <th className="p-3">Display</th>
                         <th className="p-3">Akku</th>
                         <th className="p-3">Ladebuchse</th>
+                        <th className="p-3">Kamera</th>
+                        <th className="p-3">Rückglas</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -314,22 +323,17 @@ export default function ManagePage() {
                           className="border-b border-neutral-100 last:border-0"
                         >
                           <td className="p-3 font-medium">{modell}</td>
-                          {(["display", "akku", "charging"] as Reparaturart[]).map(
+                          {(["display", "akku", "charging", "kamera", "rueckglas"] as Reparaturart[]).map(
                             (art) => (
                               <td key={art} className="p-3">
                                 <input
                                   type="number"
                                   min={0}
                                   aria-label={`${modell} ${REPARATUR_LABELS[art]}`}
-                                  className="w-24 rounded-lg border border-neutral-300 px-2 py-1.5 outline-none focus:border-accent focus:ring-2 focus:ring-accent/20"
+                                  className="w-20 rounded-lg border border-neutral-300 px-2 py-1.5 outline-none focus:border-accent focus:ring-2 focus:ring-accent/20"
                                   value={preise[art]}
                                   onChange={(e) =>
-                                    updatePreis(
-                                      marke,
-                                      modell,
-                                      art,
-                                      Number(e.target.value),
-                                    )
+                                    updatePreis(marke, modell, art, Number(e.target.value))
                                   }
                                 />
                               </td>
