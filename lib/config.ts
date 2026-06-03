@@ -37,3 +37,6 @@ export const CONTACT_EMAIL = "email@placeholder.com"; // TODO: echte E-Mail-Adre
 export const INSTAGRAM_URL = "#"; // TODO: Instagram-Link
 export const FACEBOOK_URL = "#"; // TODO: Facebook-Link
 export const TIKTOK_URL = "#"; // TODO: TikTok-Link
+
+// Wartungsmodus — true = Seite gesperrt, false = Seite normal
+export const MAINTENANCE_MODE = true;
