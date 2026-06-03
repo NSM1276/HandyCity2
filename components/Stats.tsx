@@ -6,7 +6,7 @@ import { motion, useInView, useMotionValue, useSpring } from "framer-motion";
 const STATS = [
   { end: 1000, suffix: "+", label: "Reparaturen", decimal: false },
   { end: 5, suffix: " Jahre", label: "Erfahrung", decimal: false },
-  { end: 4.7, suffix: "★", label: "Google Rating", decimal: true },
+  { end: 5.0, suffix: "★", label: "Google Rating", decimal: true },
   { end: 30, suffix: " Min", label: "Schnellreparatur", decimal: false },
 ] as const;
 
