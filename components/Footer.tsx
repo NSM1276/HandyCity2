@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { ADDRESS, OPENING_HOURS, PHONE, MAPS_EMBED_SRC, GOOGLE_REVIEWS_URL, INSTAGRAM_URL, FACEBOOK_URL, TIKTOK_URL } from "@/lib/config";
 import { waLink } from "@/lib/whatsapp";
@@ -11,13 +10,15 @@ export default function Footer() {
 
         {/* Column 1: Logo + contact */}
         <div>
-          <Image
-            src="/logo.webp"
-            alt="Handy City 2"
-            width={160}
-            height={90}
-            className="h-auto w-28 brightness-0 invert"
-          />
+          <span className="logo-live">
+            <img
+              src="/handycity2logo.svg"
+              alt="Handy City 2"
+              width={200}
+              height={52}
+              className="h-auto w-[160px]"
+            />
+          </span>
           <p className="mt-5 text-sm leading-relaxed text-neutral-400">{ADDRESS}</p>
           <a
             href={`tel:${PHONE.replace(/\s/g, "")}`}
