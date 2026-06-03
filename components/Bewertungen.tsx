@@ -14,11 +14,28 @@ import { GOOGLE_REVIEWS_URL } from "@/lib/config";
 
 const BEWERTUNGEN = [
   {
+    name: "Misan TJ",
+    initials: "MT",
+    color: "bg-[#B8960C]",
+    photo: "/misan.png",
+    text: "Sehr guter Service! Mein Handy wurde schnell und professionell repariert. Der Preis war fair, und die Qualität der Arbeit spricht für sich – läuft seitdem problemlos. Wer ein Handy reparieren lassen möchte, ist hier genau richtig.",
+    badge: "Local Guide",
+    featured: true,
+  },
+  {
+    name: "Najeeb Ayobi",
+    initials: "NA",
+    color: "bg-orange-500",
+    photo: "/najeeb.png",
+    text: "Meine Handy wurde schnell wie möglich repariert. iPhone 16 Pro Max Display Tausch in 10 min – sehr top!",
+    featured: false,
+  },
+  {
     name: "Annemarie Korbei",
     initials: "AK",
     color: "bg-rose-500",
     text: "Super Service, faire Preise. Hatte keine Zeit mein Telefon wieder abzuholen, wurde mir vom Chef nach Hause geliefert. Danke jeder Zeit wieder. LG",
-    featured: true,
+    featured: false,
   },
   {
     name: "E Talic",
@@ -73,7 +90,7 @@ function BeamBorder() {
   const background = useTransform(
     rotation,
     (r) =>
-      `conic-gradient(from ${r}deg at 50% 50%, transparent 0%, transparent 78%, #E30000 85%, rgba(227,0,0,0.45) 90%, transparent 95%)`
+      `conic-gradient(from ${r}deg at 50% 50%, transparent 0%, transparent 78%, #D4AF37 85%, rgba(212,175,55,0.45) 90%, transparent 95%)`
   );
 
   return (
@@ -126,11 +143,19 @@ function TopSwipeCard({
         "{review.text}"
       </blockquote>
       <figcaption className="mt-4 flex items-center gap-3">
-        <div
-          className={`flex h-9 w-9 items-center justify-center rounded-full text-xs font-bold text-white ${review.color}`}
-        >
-          {review.initials}
-        </div>
+        {"photo" in review && review.photo ? (
+          <img
+            src={review.photo}
+            alt={review.name}
+            className="h-9 w-9 rounded-full object-cover ring-1 ring-accent/30"
+          />
+        ) : (
+          <div
+            className={`flex h-9 w-9 items-center justify-center rounded-full text-xs font-bold text-white ${review.color}`}
+          >
+            {review.initials}
+          </div>
+        )}
         <span className="text-sm font-semibold text-white">{review.name}</span>
       </figcaption>
     </motion.figure>
@@ -200,7 +225,7 @@ export default function Bewertungen() {
     <section id="bewertungen" className="bg-dark py-20 md:py-28">
       <div className="mx-auto max-w-content px-6">
         <div className="text-center">
-          <p className="text-sm font-semibold uppercase tracking-widest text-accent">
+          <p className="text-sm font-semibold uppercase tracking-widest shimmer-text">
             Kundenrezensionen
           </p>
           <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-white md:text-4xl">
@@ -227,15 +252,26 @@ export default function Bewertungen() {
           <BeamBorder />
           <figure className="relative z-10 rounded-[15px] bg-[#161616] p-8">
             <div className="flex items-center gap-4">
-              <div
-                className={`flex h-12 w-12 items-center justify-center rounded-full text-sm font-bold text-white ${FEATURED.color}`}
-              >
-                {FEATURED.initials}
-              </div>
+              {"photo" in FEATURED && FEATURED.photo ? (
+                <img
+                  src={FEATURED.photo}
+                  alt={FEATURED.name}
+                  className="h-12 w-12 shrink-0 rounded-full object-cover ring-2 ring-accent/40"
+                />
+              ) : (
+                <div
+                  className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-sm font-bold text-white ${FEATURED.color}`}
+                >
+                  {FEATURED.initials}
+                </div>
+              )}
               <div>
                 <figcaption className="font-semibold text-white">
                   {FEATURED.name}
                 </figcaption>
+                {"badge" in FEATURED && FEATURED.badge && (
+                  <p className="text-xs text-neutral-500">{FEATURED.badge}</p>
+                )}
                 <div className="mt-0.5 flex gap-0.5 text-amber-400">
                   {Array.from({ length: 5 }).map((_, i) => (
                     <StarIcon key={i} className="h-4 w-4" />
@@ -283,11 +319,19 @@ export default function Bewertungen() {
                 "{b.text}"
               </blockquote>
               <figcaption className="mt-5 flex items-center gap-3">
-                <div
-                  className={`flex h-9 w-9 items-center justify-center rounded-full text-xs font-bold text-white ${b.color}`}
-                >
-                  {b.initials}
-                </div>
+                {"photo" in b && b.photo ? (
+                  <img
+                    src={b.photo}
+                    alt={b.name}
+                    className="h-9 w-9 rounded-full object-cover ring-1 ring-accent/30"
+                  />
+                ) : (
+                  <div
+                    className={`flex h-9 w-9 items-center justify-center rounded-full text-xs font-bold text-white ${b.color}`}
+                  >
+                    {b.initials}
+                  </div>
+                )}
                 <span className="text-sm font-semibold text-white">
                   {b.name}
                 </span>

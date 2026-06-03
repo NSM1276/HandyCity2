@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import MaintenancePage from "@/components/MaintenancePage";
 import { MAINTENANCE_MODE } from "@/lib/config";
+import CursorSpotlight from "@/components/CursorSpotlight";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -50,6 +51,7 @@ export default function RootLayout({
   return (
     <html lang="de" className={inter.variable}>
       <body className="font-sans">
+        <CursorSpotlight />
         <Navbar />
         {children}
       </body>

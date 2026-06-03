@@ -221,6 +221,7 @@
     {
       "id": 1,
       "kategorie": "smartphone",
+      "marke": "apple",
       "name": "iPhone 13 128GB",
       "preis": 349,
       "bild": "https://yntf2otfeoh2ibl9.public.blob.vercel-storage.com/produkte/1780423727070-5gjz1poPXMDkBFTXl2PyqbObFto7Ef.jpg",
@@ -229,6 +230,7 @@
     {
       "id": 2,
       "kategorie": "smartphone",
+      "marke": "apple",
       "name": "iPhone 12 64GB",
       "preis": 249,
       "bild": ""
@@ -236,6 +238,7 @@
     {
       "id": 3,
       "kategorie": "smartphone",
+      "marke": "samsung",
       "name": "Samsung Galaxy S22",
       "preis": 299,
       "bild": ""
@@ -243,6 +246,7 @@
     {
       "id": 4,
       "kategorie": "smartphone",
+      "marke": "samsung",
       "name": "Samsung Galaxy A54",
       "preis": 199,
       "bild": ""
@@ -250,6 +254,7 @@
     {
       "id": 5,
       "kategorie": "smartphone",
+      "marke": "xiaomi",
       "name": "Xiaomi Redmi Note 12",
       "preis": 149,
       "bild": ""
@@ -257,6 +262,7 @@
     {
       "id": 6,
       "kategorie": "smartphone",
+      "marke": "samsung",
       "name": "Samsung Galaxy S23",
       "preis": 399,
       "bild": ""
@@ -264,6 +270,7 @@
     {
       "id": 7,
       "kategorie": "smartphone",
+      "marke": "apple",
       "name": "iPhone 14 128GB",
       "preis": 499,
       "bild": ""
@@ -271,6 +278,7 @@
     {
       "id": 8,
       "kategorie": "smartphone",
+      "marke": "xiaomi",
       "name": "Xiaomi 13",
       "preis": 279,
       "bild": ""
@@ -278,6 +286,7 @@
     {
       "id": 9,
       "kategorie": "smartphone",
+      "marke": "samsung",
       "name": "Samsung Galaxy A35",
       "preis": 179,
       "bild": ""
@@ -285,8 +294,89 @@
     {
       "id": 10,
       "kategorie": "smartphone",
+      "marke": "apple",
       "name": "iPhone 11 64GB",
       "preis": 199,
+      "bild": ""
+    },
+    {
+      "id": 21,
+      "kategorie": "smartphone",
+      "marke": "apple",
+      "name": "iPhone 15 128GB",
+      "preis": 599,
+      "bild": ""
+    },
+    {
+      "id": 22,
+      "kategorie": "smartphone",
+      "marke": "apple",
+      "name": "iPhone 15 Pro 256GB",
+      "preis": 799,
+      "bild": ""
+    },
+    {
+      "id": 23,
+      "kategorie": "smartphone",
+      "marke": "apple",
+      "name": "iPhone 16 128GB",
+      "preis": 849,
+      "bild": ""
+    },
+    {
+      "id": 24,
+      "kategorie": "smartphone",
+      "marke": "apple",
+      "name": "iPhone XS 64GB",
+      "preis": 149,
+      "bild": ""
+    },
+    {
+      "id": 25,
+      "kategorie": "smartphone",
+      "marke": "apple",
+      "name": "iPhone SE 2022 64GB",
+      "preis": 179,
+      "bild": ""
+    },
+    {
+      "id": 26,
+      "kategorie": "smartphone",
+      "marke": "apple",
+      "name": "iPhone 12 Pro 128GB",
+      "preis": 329,
+      "bild": ""
+    },
+    {
+      "id": 27,
+      "kategorie": "smartphone",
+      "marke": "samsung",
+      "name": "Samsung Galaxy S24",
+      "preis": 599,
+      "bild": ""
+    },
+    {
+      "id": 28,
+      "kategorie": "smartphone",
+      "marke": "xiaomi",
+      "name": "Xiaomi Redmi Note 13",
+      "preis": 199,
+      "bild": ""
+    },
+    {
+      "id": 29,
+      "kategorie": "smartphone",
+      "marke": "xiaomi",
+      "name": "Xiaomi 12 Pro 256GB",
+      "preis": 349,
+      "bild": ""
+    },
+    {
+      "id": 30,
+      "kategorie": "smartphone",
+      "marke": "xiaomi",
+      "name": "Xiaomi Redmi 13C 128GB",
+      "preis": 129,
       "bild": ""
     },
     {

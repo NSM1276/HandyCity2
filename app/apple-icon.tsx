@@ -8,25 +8,26 @@ export default function AppleIcon() {
     (
       <div
         style={{
-          background: "#E30000",
+          background: "#0A0A0A",
           width: "100%",
           height: "100%",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
           borderRadius: 40,
+          border: "8px solid #D4AF37",
         }}
       >
         <div
           style={{
-            color: "white",
-            fontSize: 80,
+            color: "#D4AF37",
+            fontSize: 78,
             fontWeight: 900,
-            letterSpacing: "-2px",
+            letterSpacing: "-3px",
             fontFamily: "sans-serif",
           }}
         >
-          HC
+          H2
         </div>
       </div>
     ),

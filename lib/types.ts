@@ -1,8 +1,10 @@
 export type Kategorie = "smartphone" | "zubehoer";
+export type Marke = "apple" | "samsung" | "xiaomi";
 
 export interface Produkt {
   id: number;
   kategorie: Kategorie;
+  marke?: Marke;
   name: string;
   preis: number;
   bild: string;

@@ -114,16 +114,16 @@ function TiltCard({
 
 export default function Leistungen() {
   return (
-    <section id="leistungen" className="bg-white py-20 md:py-28">
+    <section id="leistungen" className="bg-dark py-20 md:py-28">
       <div className="mx-auto max-w-content px-6">
         <div className="text-center">
-          <p className="text-sm font-semibold uppercase tracking-widest text-accent">
+          <p className="text-sm font-semibold uppercase tracking-widest shimmer-text">
             Unsere Services
           </p>
-          <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-neutral-900 md:text-4xl">
+          <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-white md:text-4xl">
             Handy Reparaturen und mehr…
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-neutral-500">
+          <p className="mx-auto mt-4 max-w-2xl text-neutral-400">
             Schnell, transparent und zuverlässig — kein Termin nötig. Komm einfach vorbei.
           </p>
         </div>
@@ -141,17 +141,17 @@ export default function Leistungen() {
                 ease: [0.4, 0, 0.2, 1],
               }}
             >
-              <TiltCard className="group h-full rounded-2xl border border-neutral-100 bg-surface p-6 transition-[border-color,box-shadow] hover:border-accent/20 hover:shadow-xl">
+              <TiltCard className="group h-full rounded-2xl border border-dark-border bg-dark-card p-6 transition-[border-color,box-shadow] hover:border-accent/20 hover:shadow-xl hover:shadow-accent/5">
                 <div className="flex items-start justify-between">
                   <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10">
                     <Icon className="h-6 w-6 text-accent" />
                   </div>
-                  <span className="select-none text-3xl font-black text-neutral-100">
+                  <span className="select-none text-3xl font-black text-neutral-800">
                     {nr}
                   </span>
                 </div>
 
-                <h3 className="mt-4 text-lg font-bold text-neutral-900">
+                <h3 className="mt-4 text-lg font-bold text-white">
                   {titel}
                 </h3>
 
@@ -159,7 +159,7 @@ export default function Leistungen() {
                   {punkte.map((p) => (
                     <li
                       key={p}
-                      className="flex items-start gap-2 text-sm text-neutral-600"
+                      className="flex items-start gap-2 text-sm text-neutral-400"
                     >
                       <svg
                         className="mt-0.5 h-4 w-4 shrink-0 text-accent"

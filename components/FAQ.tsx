@@ -34,29 +34,29 @@ export default function FAQ() {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section id="faq" className="bg-white py-20 md:py-28">
+    <section id="faq" className="bg-dark py-20 md:py-28">
       <div className="mx-auto max-w-3xl px-6">
         <div className="text-center">
-          <p className="text-sm font-semibold uppercase tracking-widest text-accent">
+          <p className="text-sm font-semibold uppercase tracking-widest shimmer-text">
             FAQ
           </p>
-          <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-neutral-900 md:text-4xl">
+          <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-white md:text-4xl">
             Häufige Fragen — klar beantwortet
           </h2>
-          <p className="mt-4 text-neutral-500">
+          <p className="mt-4 text-neutral-400">
             Kompakte Infos zu den meistgestellten Fragen unserer Kund:innen.
           </p>
         </div>
 
-        <div className="mt-12 divide-y divide-neutral-100 rounded-2xl border border-neutral-100 overflow-hidden">
+        <div className="mt-12 divide-y divide-dark-border rounded-2xl border border-dark-border overflow-hidden">
           {FAQS.map((faq, i) => (
-            <div key={i} className="bg-white">
+            <div key={i} className="bg-dark">
               <button
                 type="button"
                 onClick={() => setOpen(open === i ? null : i)}
-                className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left transition hover:bg-surface"
+                className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left transition hover:bg-dark-card"
               >
-                <span className="font-semibold text-neutral-800">{faq.q}</span>
+                <span className="font-semibold text-neutral-200">{faq.q}</span>
                 <span className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full border-2 transition-all duration-200 ${
                   open === i
                     ? "border-accent bg-accent text-white rotate-45"
@@ -79,7 +79,7 @@ export default function FAQ() {
                     className="overflow-hidden"
                   >
                     <div className="px-6 pb-5">
-                      <p className="text-neutral-600 leading-relaxed">{faq.a}</p>
+                      <p className="text-neutral-400 leading-relaxed">{faq.a}</p>
                     </div>
                   </motion.div>
                 )}

@@ -253,7 +253,7 @@ export default function Kostenrechner({ preise }: { preise: ReparaturPreise }) {
               aria-disabled={!whatsappText || undefined}
               className={`flex w-full items-center justify-center gap-2.5 rounded-xl px-6 py-4 text-base font-semibold transition-all duration-200 ${
                 whatsappText
-                  ? "bg-accent text-white shadow-lg shadow-accent/20 hover:bg-red-700"
+                  ? "bg-accent text-white shadow-lg shadow-accent/20 hover:bg-accent-dark"
                   : "pointer-events-none bg-[#1c1c1c] text-neutral-600 border border-dark-border"
               }`}
             >

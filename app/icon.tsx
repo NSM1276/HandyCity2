@@ -8,25 +8,26 @@ export default function Icon() {
     (
       <div
         style={{
-          background: "#E30000",
+          background: "#0A0A0A",
           width: "100%",
           height: "100%",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
           borderRadius: 7,
+          border: "1.5px solid #D4AF37",
         }}
       >
         <div
           style={{
-            color: "white",
-            fontSize: 15,
+            color: "#D4AF37",
+            fontSize: 14,
             fontWeight: 900,
             letterSpacing: "-0.5px",
             fontFamily: "sans-serif",
           }}
         >
-          HC
+          H2
         </div>
       </div>
     ),

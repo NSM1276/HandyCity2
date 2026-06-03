@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { waLink } from "@/lib/whatsapp";
@@ -20,13 +19,15 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 border-b border-dark-border bg-dark/95 backdrop-blur-sm">
       <div className="mx-auto flex max-w-content items-center justify-between px-6 py-3">
         <Link href="/" className="flex-shrink-0">
-          <Image
-            src="/logo.webp"
-            alt="Handy City 2"
-            width={120}
-            height={68}
-            className="h-auto w-[100px]"
-          />
+          <span className="logo-live">
+            <img
+              src="/handycity2logo.svg"
+              alt="Handy City 2"
+              width={200}
+              height={52}
+              className="h-auto w-[160px]"
+            />
+          </span>
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">

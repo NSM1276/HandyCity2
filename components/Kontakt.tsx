@@ -53,25 +53,25 @@ export default function Kontakt() {
   }
 
   const inputClass =
-    "w-full rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm outline-none transition focus:border-accent focus:ring-2 focus:ring-accent/20 placeholder:text-neutral-400";
+    "w-full rounded-xl border border-dark-border bg-[#1c1c1c] px-4 py-3 text-sm text-white outline-none transition focus:border-accent focus:ring-2 focus:ring-accent/20 placeholder:text-neutral-600";
 
   return (
-    <section id="kontakt" className="bg-surface py-20 md:py-28">
+    <section id="kontakt" className="bg-dark py-20 md:py-28">
       <div className="mx-auto max-w-content px-6">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
 
           {/* Left: info */}
           <div>
             <p className="text-sm font-semibold uppercase tracking-widest text-accent">Kontakt</p>
-            <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-neutral-900 md:text-4xl">
+            <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-white md:text-4xl">
               Jetzt anfragen
             </h2>
-            <p className="mt-4 text-neutral-500 leading-relaxed">
+            <p className="mt-4 text-neutral-400 leading-relaxed">
               Schreib uns einfach — wir melden uns schnellstmöglich zurück.
               Oder komm direkt vorbei, kein Termin nötig.
             </p>
 
-            <div className="mt-8 space-y-4 text-sm text-neutral-600">
+            <div className="mt-8 space-y-4 text-sm text-neutral-300">
               <div className="flex items-start gap-3">
                 <svg className="mt-0.5 h-5 w-5 shrink-0 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -99,7 +99,7 @@ export default function Kontakt() {
           </div>
 
           {/* Right: form */}
-          <div className="rounded-2xl border border-neutral-200 bg-white p-8 shadow-sm">
+          <div className="rounded-2xl border border-dark-border bg-dark-card p-8">
             {status === "success" ? (
               <div className="flex flex-col items-center justify-center py-10 text-center">
                 <div className="flex h-14 w-14 items-center justify-center rounded-full bg-accent/10">
@@ -107,8 +107,8 @@ export default function Kontakt() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <h3 className="mt-4 text-lg font-bold text-neutral-900">Nachricht gesendet!</h3>
-                <p className="mt-2 text-sm text-neutral-500">
+                <h3 className="mt-4 text-lg font-bold text-white">Nachricht gesendet!</h3>
+                <p className="mt-2 text-sm text-neutral-400">
                   Wir melden uns so schnell wie möglich bei dir.
                 </p>
                 <button
@@ -123,7 +123,7 @@ export default function Kontakt() {
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid gap-4 sm:grid-cols-2">
                   <div>
-                    <label className="mb-1.5 block text-xs font-semibold text-neutral-500 uppercase tracking-wide">
+                    <label className="mb-1.5 block text-xs font-semibold text-neutral-400 uppercase tracking-wide">
                       Name
                     </label>
                     <input
@@ -136,7 +136,7 @@ export default function Kontakt() {
                     />
                   </div>
                   <div>
-                    <label className="mb-1.5 block text-xs font-semibold text-neutral-500 uppercase tracking-wide">
+                    <label className="mb-1.5 block text-xs font-semibold text-neutral-400 uppercase tracking-wide">
                       Telefon
                     </label>
                     <input
@@ -150,7 +150,7 @@ export default function Kontakt() {
                 </div>
 
                 <div>
-                  <label className="mb-1.5 block text-xs font-semibold text-neutral-500 uppercase tracking-wide">
+                  <label className="mb-1.5 block text-xs font-semibold text-neutral-400 uppercase tracking-wide">
                     E-Mail
                   </label>
                   <input
@@ -165,7 +165,7 @@ export default function Kontakt() {
                 </div>
 
                 <div>
-                  <label className="mb-1.5 block text-xs font-semibold text-neutral-500 uppercase tracking-wide">
+                  <label className="mb-1.5 block text-xs font-semibold text-neutral-400 uppercase tracking-wide">
                     Anliegen
                   </label>
                   <div className="relative">
@@ -189,7 +189,7 @@ export default function Kontakt() {
                 </div>
 
                 <div>
-                  <label className="mb-1.5 block text-xs font-semibold text-neutral-500 uppercase tracking-wide">
+                  <label className="mb-1.5 block text-xs font-semibold text-neutral-400 uppercase tracking-wide">
                     Nachricht
                   </label>
                   <textarea

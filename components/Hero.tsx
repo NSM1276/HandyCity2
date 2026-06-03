@@ -91,59 +91,6 @@ function Typewriter() {
   );
 }
 
-// ─── 3. Spotlight Canvas ─────────────────────────────────────────────────────
-function Spotlight() {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  const pos = useRef({ x: -500, y: -500 });
-  const rafRef = useRef<number>();
-
-  useEffect(() => {
-    const canvas = canvasRef.current!;
-    const ctx = canvas.getContext("2d")!;
-    const section = canvas.parentElement!;
-
-    const resize = () => {
-      canvas.width = section.clientWidth;
-      canvas.height = section.clientHeight;
-    };
-    resize();
-    const ro = new ResizeObserver(resize);
-    ro.observe(section);
-
-    const onMove = (e: MouseEvent) => {
-      const r = section.getBoundingClientRect();
-      pos.current = { x: e.clientX - r.left, y: e.clientY - r.top };
-    };
-    section.addEventListener("mousemove", onMove);
-
-    const draw = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      const { x, y } = pos.current;
-      const g = ctx.createRadialGradient(x, y, 0, x, y, 420);
-      g.addColorStop(0, "rgba(227,0,0,0.08)");
-      g.addColorStop(0.45, "rgba(227,0,0,0.03)");
-      g.addColorStop(1, "rgba(0,0,0,0)");
-      ctx.fillStyle = g;
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-      rafRef.current = requestAnimationFrame(draw);
-    };
-    draw();
-
-    return () => {
-      ro.disconnect();
-      section.removeEventListener("mousemove", onMove);
-      cancelAnimationFrame(rafRef.current!);
-    };
-  }, []);
-
-  return (
-    <canvas
-      ref={canvasRef}
-      className="pointer-events-none absolute inset-0 z-[2]"
-    />
-  );
-}
-
 // ─── 4. Floating Particles ───────────────────────────────────────────────────
 interface Dot {
   x: number;
@@ -192,7 +139,7 @@ function Particles() {
         const a = d.alpha * Math.sin(t * Math.PI);
         ctx.beginPath();
         ctx.arc(d.x, d.y, d.r, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(227,0,0,${a.toFixed(3)})`;
+        ctx.fillStyle = `rgba(212,175,55,${a.toFixed(3)})`;
         ctx.fill();
         if (d.life >= d.maxLife || d.y < -10) {
           d.x = Math.random() * canvas.width;
@@ -231,7 +178,7 @@ function GradientBlobs() {
           width: 700,
           height: 700,
           background:
-            "radial-gradient(circle, rgba(227,0,0,0.13) 0%, transparent 70%)",
+            "radial-gradient(circle, rgba(212,175,55,0.13) 0%, transparent 70%)",
           top: -260,
           left: -180,
           filter: "blur(64px)",
@@ -245,7 +192,7 @@ function GradientBlobs() {
           width: 480,
           height: 480,
           background:
-            "radial-gradient(circle, rgba(180,0,0,0.09) 0%, transparent 70%)",
+            "radial-gradient(circle, rgba(212,175,55,0.09) 0%, transparent 70%)",
           bottom: -130,
           right: "8%",
           filter: "blur(52px)",
@@ -313,7 +260,6 @@ export default function Hero() {
       {/* Special effects layers */}
       <GradientBlobs />
       <Particles />
-      <Spotlight />
 
       {/* Content — z-10 sits above all effect layers */}
       <div className="relative z-10 mx-auto w-full max-w-content px-6 py-20">
@@ -323,9 +269,9 @@ export default function Hero() {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.15 }}
-            className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-accent"
+            className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest"
           >
-            Express Reparatur · Wien Meidling
+            <span className="shimmer-text">Express Reparatur · Wien Meidling</span>
           </motion.div>
 
           <motion.h1
@@ -336,7 +282,7 @@ export default function Hero() {
           >
             {scrambledH1}
             <br />
-            <span className="text-accent">Wir reparieren es.</span>
+            <span className="shimmer-text">Wir reparieren es.</span>
           </motion.h1>
 
           <motion.p
@@ -370,7 +316,7 @@ export default function Hero() {
                 )}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2.5 rounded-full bg-accent px-7 py-3.5 text-base font-semibold text-white shadow-lg shadow-accent/25 transition hover:bg-red-700"
+                className="shimmer-btn inline-flex items-center gap-2.5 rounded-full bg-accent px-7 py-3.5 text-base font-semibold text-white shadow-lg shadow-accent/25 transition hover:bg-accent-dark"
               >
                 <WhatsAppIcon className="h-5 w-5" />
                 Per WhatsApp anfragen

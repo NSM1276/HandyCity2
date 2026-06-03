@@ -7,10 +7,10 @@
 
 // WhatsApp-Nummer im internationalen Format OHNE "+" oder Leerzeichen.
 // Beispiel Österreich: "436641234567"
-export const WHATSAPP_NUMBER = "43XXXXXXXXX"; // TODO: echte WhatsApp-Nummer
+export const WHATSAPP_NUMBER = "436644936374";
 
 // Telefonnummer wie sie angezeigt werden soll.
-export const PHONE = "+43 XXX XXXXXXX"; // TODO: echte Telefonnummer
+export const PHONE = "+43 664 4936374";
 
 export const ADDRESS = "Meidlinger Hauptstraße 72, 1120 Wien";
 
@@ -31,7 +31,7 @@ export const GOOGLE_REVIEWS_URL =
   "https://maps.app.goo.gl/Ly4Niuhgg1ZF7Xkd7";
 
 // E-Mail-Adresse für das Kontaktformular.
-export const CONTACT_EMAIL = "email@placeholder.com"; // TODO: echte E-Mail-Adresse eintragen
+export const CONTACT_EMAIL = "madona1210wien@gmail.com";
 
 // Social-Media-Links — Platzhalter, später ersetzen.
 export const INSTAGRAM_URL = "#"; // TODO: Instagram-Link
