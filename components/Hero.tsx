@@ -295,7 +295,7 @@ export default function Hero() {
   const scrambledH1 = useScramble("Defektes Handy?", 350);
 
   return (
-    <section className="relative flex min-h-[88vh] items-center overflow-hidden bg-[#0A0A0A]">
+    <section className="relative flex min-h-[88svh] items-center overflow-hidden bg-[#0A0A0A]">
       {/* Base background image + overlays */}
       <div className="absolute inset-0">
         <Image
@@ -343,9 +343,9 @@ export default function Hero() {
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.45 }}
-            className="mt-6 text-lg leading-relaxed text-neutral-300 md:text-xl"
+            className="mt-6 min-h-[2em] text-lg leading-relaxed text-neutral-300 md:text-xl"
           >
-            <Typewriter /> — schnell, fair und professionell.
+            <span className="inline-block min-w-[12ch]"><Typewriter /></span> — schnell, fair und professionell.
           </motion.p>
 
           <motion.p
