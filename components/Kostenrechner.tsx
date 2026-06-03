@@ -223,12 +223,12 @@ export default function Kostenrechner({ preise }: { preise: ReparaturPreise }) {
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.95 }}
                   transition={{ duration: 0.25 }}
-                  className="mb-5 rounded-xl border border-accent/25 bg-accent/10 px-6 py-5 text-center"
+                  className="mb-5 rounded-xl border border-green-500/30 bg-green-500/10 px-6 py-5 text-center"
                 >
                   <p className="text-sm text-neutral-400">
                     Richtpreis für {marke} {modell} — {REPARATUR_LABELS[art as Reparaturart]}
                   </p>
-                  <p className="mt-1 text-4xl font-black text-accent">{preis} €</p>
+                  <p className="mt-1 text-4xl font-black text-green-400">{preis} €</p>
                 </motion.div>
               ) : (
                 <motion.div
@@ -250,7 +250,7 @@ export default function Kostenrechner({ preise }: { preise: ReparaturPreise }) {
               href={whatsappText ? waLink(whatsappText) : undefined}
               target="_blank"
               rel="noopener noreferrer"
-              aria-disabled={!whatsappText ? "true" : "false"}
+              aria-disabled={!whatsappText || undefined}
               className={`flex w-full items-center justify-center gap-2.5 rounded-xl px-6 py-4 text-base font-semibold transition-all duration-200 ${
                 whatsappText
                   ? "bg-accent text-white shadow-lg shadow-accent/20 hover:bg-red-700"
