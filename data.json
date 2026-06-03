@@ -6,15 +6,30 @@
         "akku": 100,
         "charging": 23
       },
-      "iPhone 15 / 15 Pro": {
+      "iPhone 16 / 16 Plus": {
+        "display": 139,
+        "akku": 95,
+        "charging": 23
+      },
+      "iPhone 15 Pro / 15 Pro Max": {
         "display": 159,
         "akku": 139,
         "charging": 119
       },
-      "iPhone 14 / 14 Pro": {
+      "iPhone 15 / 15 Plus": {
+        "display": 149,
+        "akku": 129,
+        "charging": 109
+      },
+      "iPhone 14 Pro / 14 Pro Max": {
         "display": 179,
         "akku": 149,
         "charging": 149
+      },
+      "iPhone 14 / 14 Plus": {
+        "display": 159,
+        "akku": 139,
+        "charging": 129
       },
       "iPhone 13 / 13 Pro": {
         "display": 139,
@@ -25,9 +40,24 @@
         "display": 119,
         "akku": 89,
         "charging": 89
+      },
+      "iPhone 11 / 11 Pro": {
+        "display": 99,
+        "akku": 79,
+        "charging": 79
+      },
+      "iPhone XS / XR / X": {
+        "display": 89,
+        "akku": 69,
+        "charging": 69
       }
     },
     "Samsung": {
+      "Galaxy S25 / S25 Ultra": {
+        "display": 269,
+        "akku": 99,
+        "charging": 79
+      },
       "Galaxy S24 / S24 Ultra": {
         "display": 249,
         "akku": 89,
@@ -43,15 +73,35 @@
         "akku": 69,
         "charging": 59
       },
-      "Galaxy A54 / A55": {
+      "Galaxy S21 / S21 Ultra": {
+        "display": 149,
+        "akku": 59,
+        "charging": 49
+      },
+      "Galaxy A55 / A54": {
         "display": 119,
         "akku": 59,
         "charging": 49
       },
-      "Galaxy A34 / A35": {
+      "Galaxy A35 / A34": {
         "display": 99,
         "akku": 49,
         "charging": 39
+      },
+      "Galaxy A25 / A24": {
+        "display": 89,
+        "akku": 45,
+        "charging": 35
+      },
+      "Galaxy A15 / A14": {
+        "display": 79,
+        "akku": 39,
+        "charging": 29
+      },
+      "Galaxy M35 / M34": {
+        "display": 89,
+        "akku": 45,
+        "charging": 35
       }
     },
     "Xiaomi": {
@@ -65,6 +115,11 @@
         "akku": 49,
         "charging": 39
       },
+      "Xiaomi 12 / 12 Pro": {
+        "display": 109,
+        "akku": 45,
+        "charging": 35
+      },
       "Redmi Note 13 / 13 Pro": {
         "display": 99,
         "akku": 39,
@@ -75,10 +130,30 @@
         "akku": 39,
         "charging": 29
       },
+      "Redmi Note 11 / 11 Pro": {
+        "display": 69,
+        "akku": 35,
+        "charging": 25
+      },
+      "Redmi 13 / 13C": {
+        "display": 69,
+        "akku": 35,
+        "charging": 25
+      },
+      "Poco X6 / X5": {
+        "display": 99,
+        "akku": 39,
+        "charging": 35
+      },
       "Poco F5 / F6": {
         "display": 99,
         "akku": 39,
         "charging": 39
+      },
+      "Poco M5 / M6": {
+        "display": 79,
+        "akku": 35,
+        "charging": 29
       }
     }
   },
