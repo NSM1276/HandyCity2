@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import MaintenancePage from "@/components/MaintenancePage";
+import { MAINTENANCE_MODE } from "@/lib/config";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -41,6 +43,10 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  if (MAINTENANCE_MODE) {
+    return <MaintenancePage />;
+  }
+
   return (
     <html lang="de" className={inter.variable}>
       <body className="font-sans">
