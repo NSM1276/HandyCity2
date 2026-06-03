@@ -12,132 +12,119 @@ export default function OGImage() {
           width: "100%",
           height: "100%",
           display: "flex",
-          flexDirection: "column",
-          alignItems: "flex-start",
+          alignItems: "center",
           justifyContent: "center",
-          padding: "80px 90px",
           fontFamily: "sans-serif",
           position: "relative",
         }}
       >
-        {/* Top red bar */}
+        {/* Background glow — centered */}
         <div
           style={{
             position: "absolute",
-            top: 0,
-            left: 0,
-            right: 0,
-            height: 6,
-            background: "#E30000",
-          }}
-        />
-
-        {/* Background glow */}
-        <div
-          style={{
-            position: "absolute",
-            top: -200,
-            left: -200,
-            width: 700,
-            height: 700,
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            width: 800,
+            height: 800,
             background:
-              "radial-gradient(circle, rgba(227,0,0,0.18) 0%, transparent 65%)",
+              "radial-gradient(circle, rgba(227,0,0,0.15) 0%, transparent 65%)",
             borderRadius: "50%",
           }}
         />
 
-        {/* Logo badge */}
+        {/* Top + bottom border lines */}
+        <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 5, background: "#E30000" }} />
+        <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 2, background: "#1a1a1a" }} />
+
+        {/* Center content */}
         <div
           style={{
             display: "flex",
+            flexDirection: "column",
             alignItems: "center",
             justifyContent: "center",
-            background: "#E30000",
-            borderRadius: 20,
-            width: 88,
-            height: 88,
-            marginBottom: 44,
+            gap: 0,
+            zIndex: 1,
           }}
         >
+          {/* Big HC badge */}
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              background: "#E30000",
+              borderRadius: 28,
+              width: 120,
+              height: 120,
+              marginBottom: 32,
+            }}
+          >
+            <div style={{ color: "white", fontSize: 52, fontWeight: 900, letterSpacing: "-2px" }}>
+              HC
+            </div>
+          </div>
+
+          {/* Shop name */}
           <div
             style={{
               color: "white",
-              fontSize: 36,
+              fontSize: 86,
               fontWeight: 900,
-              letterSpacing: "-1px",
+              letterSpacing: "-3px",
+              lineHeight: 1,
+              marginBottom: 20,
+              textAlign: "center",
             }}
           >
-            HC
+            Handy City 2
+          </div>
+
+          {/* Location */}
+          <div
+            style={{
+              color: "#E30000",
+              fontSize: 22,
+              fontWeight: 700,
+              letterSpacing: 5,
+              textTransform: "uppercase",
+              marginBottom: 36,
+            }}
+          >
+            Wien Meidling · 1120
+          </div>
+
+          {/* Service chips */}
+          <div style={{ display: "flex", gap: 14 }}>
+            {["Display", "Akku", "Ladebuchse", "Kamera", "Rückglas"].map((s) => (
+              <div
+                key={s}
+                style={{
+                  background: "#161616",
+                  border: "1.5px solid #2a2a2a",
+                  borderRadius: 50,
+                  padding: "10px 24px",
+                  color: "#d4d4d4",
+                  fontSize: 19,
+                }}
+              >
+                {s}
+              </div>
+            ))}
           </div>
         </div>
 
-        {/* Location tag */}
-        <div
-          style={{
-            color: "#E30000",
-            fontSize: 20,
-            fontWeight: 700,
-            letterSpacing: 4,
-            textTransform: "uppercase",
-            marginBottom: 18,
-          }}
-        >
-          Wien Meidling · 1120
-        </div>
-
-        {/* Title */}
-        <div
-          style={{
-            color: "white",
-            fontSize: 80,
-            fontWeight: 900,
-            lineHeight: 1.05,
-            marginBottom: 24,
-            letterSpacing: "-2px",
-          }}
-        >
-          Handy City 2
-        </div>
-
-        {/* Tagline */}
-        <div
-          style={{
-            color: "#a3a3a3",
-            fontSize: 30,
-            marginBottom: 52,
-            lineHeight: 1.4,
-          }}
-        >
-          Express Reparatur · Ankauf · Verkauf · Zubehör
-        </div>
-
-        {/* Service chips */}
-        <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
-          {["Display", "Akku", "Ladebuchse", "Kamera", "Rückglas"].map((s) => (
-            <div
-              key={s}
-              style={{
-                background: "#1a1a1a",
-                border: "1.5px solid #2a2a2a",
-                borderRadius: 50,
-                padding: "12px 28px",
-                color: "#e5e5e5",
-                fontSize: 20,
-              }}
-            >
-              {s}
-            </div>
-          ))}
-        </div>
-
-        {/* Address bottom right */}
+        {/* Address bottom center */}
         <div
           style={{
             position: "absolute",
-            bottom: 52,
-            right: 90,
-            color: "#555",
-            fontSize: 18,
+            bottom: 28,
+            left: 0,
+            right: 0,
+            textAlign: "center",
+            color: "#444",
+            fontSize: 17,
           }}
         >
           Meidlinger Hauptstraße 72 · 1120 Wien
