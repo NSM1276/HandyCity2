@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import initialData from "@/data.json";
 import type { Reparaturart, SiteData } from "@/lib/types";
 import { compressImage } from "@/lib/compress";
@@ -21,7 +21,12 @@ function clone(data: SiteData): SiteData {
 export default function ManagePage() {
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
-  const [loggedIn, setLoggedIn] = useState(false);
+  const [loggedIn, setLoggedIn] = useState(() => {
+    if (typeof window !== "undefined") {
+      return sessionStorage.getItem("admin_auth") === "1";
+    }
+    return false;
+  });
   const [loginError, setLoginError] = useState("");
 
   const [data, setData] = useState<SiteData>(() => clone(initialData as SiteData));
@@ -44,6 +49,7 @@ export default function ManagePage() {
       body: JSON.stringify({ password }),
     });
     if (res.ok) {
+      sessionStorage.setItem("admin_auth", "1");
       setLoggedIn(true);
     } else {
       setLoginError("Falsches Passwort.");
@@ -230,7 +236,7 @@ export default function ManagePage() {
               {saving ? "Speichert…" : "Speichern"}
             </button>
             <button
-              onClick={() => { setLoggedIn(false); setPassword(""); setSaveMsg(""); }}
+              onClick={() => { sessionStorage.removeItem("admin_auth"); setLoggedIn(false); setPassword(""); setSaveMsg(""); }}
               className="rounded-xl border border-neutral-300 px-4 py-2.5 text-sm font-semibold text-neutral-500 transition hover:bg-neutral-100"
               title="Abmelden"
             >
