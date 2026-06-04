@@ -148,7 +148,7 @@ export default function Katalog({ produkte }: { produkte: Produkt[] }) {
         </div>
 
         {/* Brand tabs — icons only */}
-        <div className="mt-8 flex gap-3 overflow-x-auto pb-1 justify-start md:justify-center md:overflow-visible md:pb-0">
+        <div className="mt-8 flex gap-3 overflow-x-auto pb-2 pt-1 px-4 justify-start md:justify-center md:overflow-visible md:pb-0 md:pt-0 md:px-0">
           {TABS.map((tab) => {
             const isActive = activeTab === tab.key;
             return (
@@ -165,7 +165,7 @@ export default function Katalog({ produkte }: { produkte: Produkt[] }) {
                 }`}
               >
                 <TabIcon tabKey={tab.key} active={isActive} />
-                <span className={`absolute -right-1.5 -top-1.5 flex h-[18px] min-w-[18px] items-center justify-center rounded-full px-1 text-[10px] font-bold leading-none ${
+                <span className={`absolute right-0.5 top-0.5 md:-right-1.5 md:-top-1.5 flex h-[18px] min-w-[18px] items-center justify-center rounded-full px-1 text-[10px] font-bold leading-none ${
                   isActive ? "bg-accent text-white" : "bg-neutral-300 text-neutral-600"
                 }`}>
                   {counts[tab.key]}
