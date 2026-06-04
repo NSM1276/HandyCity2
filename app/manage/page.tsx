@@ -29,6 +29,12 @@ export default function ManagePage() {
   const [saveMsg, setSaveMsg] = useState("");
   const [uploadingId, setUploadingId] = useState<number | null>(null);
 
+  const [pwOld, setPwOld] = useState("");
+  const [pwNew, setPwNew] = useState("");
+  const [pwConfirm, setPwConfirm] = useState("");
+  const [pwSaving, setPwSaving] = useState(false);
+  const [pwMsg, setPwMsg] = useState("");
+
   async function handleLogin(e: React.FormEvent) {
     e.preventDefault();
     setLoginError("");
@@ -116,6 +122,30 @@ export default function ManagePage() {
       setSaveMsg(`Fehler: ${(err as Error).message}`);
     } finally {
       setSaving(false);
+    }
+  }
+
+  async function handleChangePassword(e: React.FormEvent) {
+    e.preventDefault();
+    setPwMsg("");
+    if (pwNew !== pwConfirm) { setPwMsg("Passwörter stimmen nicht überein."); return; }
+    if (pwNew.length < 6) { setPwMsg("Neues Passwort muss mindestens 6 Zeichen haben."); return; }
+    setPwSaving(true);
+    try {
+      const res = await fetch("/api/change-password", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ oldPassword: pwOld, newPassword: pwNew }),
+      });
+      const json = await res.json();
+      if (!res.ok || !json.ok) throw new Error(json.error || "Fehler");
+      setPwMsg("✓ Passwort geändert — in ~1–2 Min aktiv.");
+      setPwOld(""); setPwNew(""); setPwConfirm("");
+      setPassword(pwNew);
+    } catch (err) {
+      setPwMsg(`Fehler: ${(err as Error).message}`);
+    } finally {
+      setPwSaving(false);
     }
   }
 
@@ -292,6 +322,58 @@ export default function ManagePage() {
               </div>
             );
           })}
+        </section>
+
+        {/* Block 0 — Passwort ändern */}
+        <section>
+          <h2 className="text-xl font-bold">Passwort ändern</h2>
+          <p className="mt-1 text-sm text-neutral-500">
+            Neues Passwort wird nach ~1–2 Minuten aktiv.
+          </p>
+          <form onSubmit={handleChangePassword} className="mt-6 max-w-sm space-y-4">
+            <div>
+              <label className="block text-xs font-medium text-neutral-500 mb-1">Altes Passwort</label>
+              <input
+                type="password"
+                value={pwOld}
+                onChange={(e) => setPwOld(e.target.value)}
+                required
+                className={inputClass}
+              />
+            </div>
+            <div>
+              <label className="block text-xs font-medium text-neutral-500 mb-1">Neues Passwort</label>
+              <input
+                type="password"
+                value={pwNew}
+                onChange={(e) => setPwNew(e.target.value)}
+                required
+                className={inputClass}
+              />
+            </div>
+            <div>
+              <label className="block text-xs font-medium text-neutral-500 mb-1">Neues Passwort bestätigen</label>
+              <input
+                type="password"
+                value={pwConfirm}
+                onChange={(e) => setPwConfirm(e.target.value)}
+                required
+                className={inputClass}
+              />
+            </div>
+            {pwMsg && (
+              <p className={`text-sm ${pwMsg.startsWith("✓") ? "text-green-600" : "text-accent"}`}>
+                {pwMsg}
+              </p>
+            )}
+            <button
+              type="submit"
+              disabled={pwSaving}
+              className="rounded-xl bg-accent px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-accent-dark disabled:opacity-60"
+            >
+              {pwSaving ? "Wird gespeichert…" : "Passwort ändern"}
+            </button>
+          </form>
         </section>
 
         {/* Block 2 — Kostenrechner */}

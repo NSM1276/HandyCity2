@@ -25,6 +25,7 @@ export type ReparaturPreise = Record<string, Record<string, ReparaturPreis>>;
 export interface SiteData {
   reparaturPreise: ReparaturPreise;
   produkte: Produkt[];
+  adminPassword?: string;
 }
 
 export type Reparaturart = keyof ReparaturPreis;
