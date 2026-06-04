@@ -122,6 +122,9 @@ export default function Footer() {
             <Link href="/datenschutz" className="transition hover:text-neutral-400">
               Datenschutz
             </Link>
+            <Link href="/manage" className="transition hover:text-neutral-400">
+              Admin
+            </Link>
           </div>
         </div>
       </div>
