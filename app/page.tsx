@@ -4,6 +4,7 @@ import Hero from "@/components/Hero";
 import Stats from "@/components/Stats";
 import BrandLogos from "@/components/BrandLogos";
 import Leistungen from "@/components/Leistungen";
+import Reparaturservice from "@/components/Reparaturservice";
 import Kostenrechner from "@/components/Kostenrechner";
 import Katalog from "@/components/Katalog";
 import Bewertungen from "@/components/Bewertungen";
@@ -20,7 +21,8 @@ export default function Home() {
       <Stats />
       <BrandLogos />
       <Leistungen />
-      <Kostenrechner preise={siteData.reparaturPreise} />
+      <Reparaturservice />
+      <Kostenrechner />
       <Katalog produkte={siteData.produkte} />
       <Bewertungen />
       <FAQ />

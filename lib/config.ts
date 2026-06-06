@@ -17,7 +17,7 @@ export const ADDRESS = "Meidlinger Hauptstraße 72, 1120 Wien";
 // Öffnungszeiten — eine Zeile pro Eintrag.
 export const OPENING_HOURS: { tag: string; zeit: string }[] = [
   { tag: "Montag – Freitag", zeit: "09:00 – 20:00" },
-  { tag: "Samstag", zeit: "10:00 – 19:00" },
+  { tag: "Samstag", zeit: "09:00 – 18:00" },
   { tag: "Sonntag", zeit: "Geschlossen" },
 ];
 
