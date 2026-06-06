@@ -5,13 +5,13 @@ import { useEffect, useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const SLIDES = [
-  { src: "/banner-slide-1.webp", alt: "iPhone 17 Lineup" },
-  { src: "/banner-slide-2.webp", alt: "Smartphone Reparatur" },
-  { src: "/banner-slide-3.webp", alt: "Samsung Galaxy" },
-  { src: "/banner-slide-4.webp", alt: "Zubehör & Geräte" },
-  { src: "/banner-slide-5.webp", alt: "Huawei P40 Pro" },
-  { src: "/banner-slide-6.webp", alt: "Xiaomi" },
-  { src: "/banner-slide-7.webp", alt: "Handy City 2" },
+  { src: "/banner-slide-1.webp", alt: "iPhone Reparatur Wien Meidling – Handy City 2" },
+  { src: "/banner-slide-2.webp", alt: "Smartphone Reparatur Express Wien – Display & Akku Tausch" },
+  { src: "/banner-slide-3.webp", alt: "Samsung Galaxy Reparatur Wien – Handy City 2" },
+  { src: "/banner-slide-4.webp", alt: "Handy Zubehör Wien – Cases, Panzerglas, Kabel" },
+  { src: "/banner-slide-5.webp", alt: "Huawei Reparatur Wien Meidling – Handy City 2" },
+  { src: "/banner-slide-6.webp", alt: "Xiaomi Reparatur Wien – schnell & günstig" },
+  { src: "/banner-slide-7.webp", alt: "Handy City 2 – Ihr Handy-Shop in Wien Meidling" },
 ];
 
 const AUTO_PLAY_MS = 5000;
