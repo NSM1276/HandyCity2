@@ -54,7 +54,7 @@ export default function Kontakt() {
 
           {/* Left: info */}
           <div>
-            <p className="text-sm font-semibold uppercase tracking-widest text-accent">Kontakt</p>
+            <p className="shimmer-text text-sm font-semibold uppercase tracking-widest">Kontakt</p>
             <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-white md:text-4xl">
               Jetzt anfragen
             </h2>

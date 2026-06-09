@@ -27,7 +27,7 @@ export default function Reparaturservice() {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.55, ease: [0.4, 0, 0.2, 1] }}
           >
-            <p className="text-sm font-semibold uppercase tracking-widest text-accent">
+            <p className="shimmer-text text-sm font-semibold uppercase tracking-widest">
               Reparaturservice
             </p>
             <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-white md:text-4xl">
@@ -43,11 +43,11 @@ export default function Reparaturservice() {
               vor, die sich nicht leicht zuordnen lässt. In beiden Fällen helfen wir
               weiter – komm einfach ohne Termin vorbei.
             </p>
-            <div className="mt-8 inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-5 py-2.5 text-sm font-semibold text-accent">
-              <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+            <div className="mt-8 inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-5 py-2.5 text-sm font-semibold">
+              <svg className="h-4 w-4 text-accent" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
               </svg>
-              Alle Reparaturen mit Garantie
+              <span className="shimmer-text">Alle Reparaturen mit Garantie</span>
             </div>
           </motion.div>
 

@@ -200,7 +200,7 @@ export default function Kostenrechner() {
           transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
           className="text-center"
         >
-          <p className="text-sm font-semibold uppercase tracking-widest text-accent">
+          <p className="shimmer-text text-sm font-semibold uppercase tracking-widest">
             Schnell & unkompliziert
           </p>
           <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-white md:text-4xl">

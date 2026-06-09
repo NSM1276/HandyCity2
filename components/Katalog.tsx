@@ -136,7 +136,7 @@ export default function Katalog({ produkte }: { produkte: Produkt[] }) {
 
         {/* Header */}
         <div className="text-center">
-          <p className="text-sm font-semibold uppercase tracking-widest text-accent">
+          <p className="shimmer-text text-sm font-semibold uppercase tracking-widest">
             Geräte & Zubehör
           </p>
           <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-neutral-900 md:text-4xl">
@@ -198,7 +198,7 @@ export default function Katalog({ produkte }: { produkte: Produkt[] }) {
               <div className="flex flex-1 flex-col p-3">
                 <h3 className="text-sm font-semibold leading-snug text-neutral-800">{p.name}</h3>
                 <div className="mt-auto pt-2">
-                  <p className="text-lg font-black text-accent">{p.preis} €</p>
+                  <p className="shimmer-text text-lg font-black">{p.preis} €</p>
                   <a
                     href={waLink(`Hallo, ich interessiere mich für: ${p.name} (${p.preis} €). Ist es verfügbar?`)}
                     target="_blank"
@@ -247,7 +247,7 @@ export default function Katalog({ produkte }: { produkte: Produkt[] }) {
                 <div className="flex flex-1 flex-col p-4">
                   <h3 className="text-sm font-semibold leading-snug text-neutral-800">{p.name}</h3>
                   <div className="mt-auto pt-3">
-                    <p className="text-xl font-black text-accent">{p.preis} €</p>
+                    <p className="shimmer-text text-xl font-black">{p.preis} €</p>
                     <a
                       href={waLink(`Hallo, ich interessiere mich für: ${p.name} (${p.preis} €). Ist es verfügbar?`)}
                       target="_blank"

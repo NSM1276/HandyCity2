@@ -52,7 +52,7 @@ function StatItem({
     >
       <div className="flex items-baseline justify-center font-black text-white">
         <span className="tabular-nums text-4xl md:text-5xl">{display}</span>
-        <span className="ml-1 text-2xl text-accent md:text-3xl">
+        <span className="shimmer-text ml-1 text-2xl md:text-3xl">
           {stat.suffix}
         </span>
       </div>
