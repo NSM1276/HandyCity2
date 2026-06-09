@@ -5,7 +5,7 @@ import { useEffect, useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const SLIDES = [
-  { src: "/banner-slide-1.webp", alt: "iPhone Reparatur Wien Meidling – Handy City 2" },
+  { src: "/banner-slide-1.jpeg", alt: "iPhone 17 Pro Max – Handy City 2 Wien Meidling" },
   { src: "/banner-slide-2.webp", alt: "Smartphone Reparatur Express Wien – Display & Akku Tausch" },
   { src: "/banner-slide-3.webp", alt: "Samsung Galaxy Reparatur Wien – Handy City 2" },
   { src: "/banner-slide-4.webp", alt: "Handy Zubehör Wien – Cases, Panzerglas, Kabel" },
