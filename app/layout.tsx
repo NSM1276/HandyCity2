@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import MaintenancePage from "@/components/MaintenancePage";
 import { MAINTENANCE_MODE } from "@/lib/config";
 import CursorSpotlight from "@/components/CursorSpotlight";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -129,6 +130,7 @@ export default function RootLayout({
         <CursorSpotlight />
         <Navbar />
         {children}
+        <FloatingWhatsApp />
       </body>
     </html>
   );
