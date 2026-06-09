@@ -310,7 +310,7 @@ export default function Kostenrechner() {
                     href={waLink(whatsappText)}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex flex-1 items-center justify-center gap-2.5 rounded-xl bg-accent px-6 py-4 text-base font-semibold text-white shadow-lg shadow-accent/20 transition hover:bg-accent-dark"
+                    className="btn-gold flex flex-1 items-center justify-center gap-2.5 rounded-xl px-6 py-4 text-base font-semibold"
                   >
                     <WhatsAppIcon className="h-5 w-5" />
                     WhatsApp schreiben

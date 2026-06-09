@@ -30,7 +30,7 @@ export default function Footer() {
             href={waLink("Hallo Handy City 2, ich habe eine Frage:")}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-5 inline-flex items-center gap-2 rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-accent/20 transition hover:bg-accent-dark"
+            className="btn-gold mt-5 inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold"
           >
             <WhatsAppIcon className="h-4 w-4" />
             WhatsApp

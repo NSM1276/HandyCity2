@@ -83,7 +83,7 @@ export default function Kontakt() {
               href={waLink("Hallo Handy City 2, ich möchte eine Anfrage stellen:")}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-8 inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-accent/20 transition hover:bg-accent-dark"
+              className="btn-gold mt-8 inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold"
             >
               <WhatsAppIcon className="h-4 w-4" />
               Lieber per WhatsApp schreiben
@@ -204,7 +204,7 @@ export default function Kontakt() {
                 <button
                   type="submit"
                   disabled={status === "sending"}
-                  className="w-full rounded-xl bg-accent py-3.5 text-sm font-semibold text-white shadow-lg shadow-accent/20 transition hover:bg-accent-dark disabled:opacity-60"
+                  className="btn-gold w-full rounded-xl py-3.5 text-sm font-semibold disabled:opacity-60"
                 >
                   {status === "sending" ? "Wird gesendet…" : "Nachricht senden"}
                 </button>
