@@ -19,6 +19,7 @@ const BEWERTUNGEN = [
     color: "bg-orange-500",
     photo: "/najeeb.png",
     text: "Meine Handy wurde schnell wie möglich repariert. iPhone 16 Pro Max Display Tausch in 10 min – sehr top!",
+    badge: "" as string | undefined,
     featured: true,
   },
   {
