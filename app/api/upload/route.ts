@@ -31,6 +31,10 @@ export async function POST(request: Request) {
     );
   }
 
+  if (process.env.ADMIN_LOCKED === "true") {
+    return NextResponse.json({ ok: true, url: form.get("oldUrl") ?? "" });
+  }
+
   const token = process.env.BLOB_READ_WRITE_TOKEN;
   if (!token) {
     return NextResponse.json(

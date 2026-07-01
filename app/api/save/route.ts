@@ -27,6 +27,10 @@ export async function POST(request: Request) {
     );
   }
 
+  if (process.env.ADMIN_LOCKED === "true") {
+    return NextResponse.json({ ok: true });
+  }
+
   const token = process.env.GITHUB_TOKEN;
   const owner = process.env.GITHUB_OWNER;
   const repo = process.env.GITHUB_REPO;
