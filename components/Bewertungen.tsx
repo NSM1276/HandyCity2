@@ -14,21 +14,12 @@ import { GOOGLE_REVIEWS_URL } from "@/lib/config";
 
 const BEWERTUNGEN = [
   {
-    name: "Misan TJ",
-    initials: "MT",
-    color: "bg-[#B8960C]",
-    photo: "/misan.png",
-    text: "Sehr guter Service! Mein Handy wurde schnell und professionell repariert. Der Preis war fair, und die Qualität der Arbeit spricht für sich – läuft seitdem problemlos. Wer ein Handy reparieren lassen möchte, ist hier genau richtig.",
-    badge: "Local Guide",
-    featured: true,
-  },
-  {
     name: "Najeeb Ayobi",
     initials: "NA",
     color: "bg-orange-500",
     photo: "/najeeb.png",
     text: "Meine Handy wurde schnell wie möglich repariert. iPhone 16 Pro Max Display Tausch in 10 min – sehr top!",
-    featured: false,
+    featured: true,
   },
   {
     name: "Annemarie Korbei",
