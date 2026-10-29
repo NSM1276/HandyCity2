@@ -225,7 +225,7 @@
       "name": "iPhone 13 128GB",
       "preis": 349,
       "bild": "https://yntf2otfeoh2ibl9.public.blob.vercel-storage.com/produkte/1780423727070-5gjz1poPXMDkBFTXl2PyqbObFto7Ef.jpg",
-      "hidden": true
+      "hidden": false
     },
     {
       "id": 2,
@@ -305,7 +305,8 @@
       "marke": "apple",
       "name": "iPhone 15 a1 offen 128gb",
       "preis": 400,
-      "bild": ""
+      "bild": "",
+      "hidden": false
     },
     {
       "id": 22,
