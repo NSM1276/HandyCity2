@@ -3,145 +3,145 @@
     "Apple": {
       "iPhone 16 Pro / 16 Pro Max": {
         "display": 150,
-        "akku": 100,
-        "charging": 23,
-        "kamera": 89,
+        "akku": 90,
+        "charging": 95,
+        "kamera": 180,
         "rueckglas": 89
       },
       "iPhone 16 / 16 Plus": {
-        "display": 139,
-        "akku": 95,
-        "charging": 23,
-        "kamera": 79,
+        "display": 140,
+        "akku": 85,
+        "charging": 80,
+        "kamera": 140,
         "rueckglas": 79
       },
       "iPhone 15 Pro / 15 Pro Max": {
-        "display": 159,
-        "akku": 139,
-        "charging": 119,
-        "kamera": 79,
-        "rueckglas": 79
+        "display": 145,
+        "akku": 85,
+        "charging": 80,
+        "kamera": 155,
+        "rueckglas": 89
       },
       "iPhone 15 / 15 Plus": {
-        "display": 149,
-        "akku": 129,
-        "charging": 109,
-        "kamera": 69,
-        "rueckglas": 69
+        "display": 130,
+        "akku": 75,
+        "charging": 70,
+        "kamera": 145,
+        "rueckglas": 70
       },
       "iPhone 14 Pro / 14 Pro Max": {
-        "display": 179,
-        "akku": 149,
-        "charging": 149,
-        "kamera": 79,
-        "rueckglas": 79
+        "display": 140,
+        "akku": 75,
+        "charging": 70,
+        "kamera": 140,
+        "rueckglas": 70
       },
       "iPhone 14 / 14 Plus": {
-        "display": 159,
-        "akku": 139,
-        "charging": 129,
-        "kamera": 69,
-        "rueckglas": 69
+        "display": 130,
+        "akku": 70,
+        "charging": 70,
+        "kamera": 120,
+        "rueckglas": 70
       },
       "iPhone 13 / 13 Pro": {
-        "display": 139,
-        "akku": 139,
-        "charging": 119,
-        "kamera": 69,
-        "rueckglas": 69
+        "display": 120,
+        "akku": 65,
+        "charging": 55,
+        "kamera": 105,
+        "rueckglas": 55
       },
       "iPhone 12 / 12 Pro": {
-        "display": 119,
-        "akku": 89,
-        "charging": 89,
-        "kamera": 59,
-        "rueckglas": 59
+        "display": 100,
+        "akku": 65,
+        "charging": 55,
+        "kamera": 100,
+        "rueckglas": 55
       },
       "iPhone 11 / 11 Pro": {
-        "display": 99,
-        "akku": 79,
-        "charging": 79,
-        "kamera": 49,
-        "rueckglas": 49
+        "display": 95,
+        "akku": 50,
+        "charging": 50,
+        "kamera": 80,
+        "rueckglas": 50
       },
       "iPhone XS / XR / X": {
-        "display": 89,
-        "akku": 69,
-        "charging": 69,
+        "display": 65,
+        "akku": 35,
+        "charging": 40,
         "kamera": 45,
-        "rueckglas": 45
+        "rueckglas": 40
       }
     },
     "Samsung": {
       "Galaxy S25 / S25 Ultra": {
         "display": 269,
-        "akku": 99,
+        "akku": 90,
         "charging": 79,
         "kamera": 99,
-        "rueckglas": 89
+        "rueckglas": 90
       },
       "Galaxy S24 / S24 Ultra": {
         "display": 249,
-        "akku": 89,
-        "charging": 69,
+        "akku": 90,
+        "charging": 70,
         "kamera": 89,
-        "rueckglas": 79
+        "rueckglas": 80
       },
       "Galaxy S23 / S23 Ultra": {
-        "display": 199,
-        "akku": 79,
-        "charging": 59,
+        "display": 220,
+        "akku": 90,
+        "charging": 60,
         "kamera": 79,
-        "rueckglas": 69
+        "rueckglas": 80
       },
       "Galaxy S22 / S22 Ultra": {
-        "display": 169,
-        "akku": 69,
-        "charging": 59,
+        "display": 220,
+        "akku": 80,
+        "charging": 60,
         "kamera": 69,
-        "rueckglas": 59
+        "rueckglas": 70
       },
       "Galaxy S21 / S21 Ultra": {
         "display": 149,
-        "akku": 59,
-        "charging": 49,
+        "akku": 80,
+        "charging": 60,
         "kamera": 59,
-        "rueckglas": 49
+        "rueckglas": 60
       },
       "Galaxy A55 / A54": {
         "display": 119,
-        "akku": 59,
-        "charging": 49,
+        "akku": 80,
+        "charging": 55,
         "kamera": 49,
-        "rueckglas": 45
+        "rueckglas": 55
       },
       "Galaxy A35 / A34": {
         "display": 99,
-        "akku": 49,
-        "charging": 39,
+        "akku": 70,
+        "charging": 55,
         "kamera": 39,
-        "rueckglas": 35
+        "rueckglas": 45
       },
       "Galaxy A25 / A24": {
         "display": 89,
-        "akku": 45,
-        "charging": 35,
+        "akku": 70,
+        "charging": 45,
         "kamera": 35,
-        "rueckglas": 29
+        "rueckglas": 45
       },
       "Galaxy A15 / A14": {
         "display": 79,
-        "akku": 39,
-        "charging": 29,
+        "akku": 70,
+        "charging": 45,
         "kamera": 29,
-        "rueckglas": 25
+        "rueckglas": 40
       },
       "Galaxy M35 / M34": {
         "display": 89,
-        "akku": 45,
-        "charging": 35,
+        "akku": 65,
+        "charging": 45,
         "kamera": 35,
-        "rueckglas": 29
+        "rueckglas": 39
       }
     },
     "Xiaomi": {
@@ -231,135 +231,135 @@
       "id": 2,
       "kategorie": "smartphone",
       "marke": "apple",
-      "name": "iPhone 12 64GB",
-      "preis": 249,
+      "name": "iphone 18 pro max 256gb",
+      "preis": 1570,
       "bild": ""
     },
     {
       "id": 3,
       "kategorie": "smartphone",
       "marke": "samsung",
-      "name": "Samsung Galaxy S22",
-      "preis": 299,
+      "name": "iphone 18 pro 256gb",
+      "preis": 1320,
       "bild": ""
     },
     {
       "id": 4,
       "kategorie": "smartphone",
       "marke": "samsung",
-      "name": "Samsung Galaxy A54",
-      "preis": 199,
+      "name": "samsung galaxy s26 ultra ",
+      "preis": 860,
       "bild": ""
     },
     {
       "id": 5,
       "kategorie": "smartphone",
       "marke": "xiaomi",
-      "name": "Xiaomi Redmi Note 12",
-      "preis": 149,
+      "name": "iphone 17 pro max 256gb",
+      "preis": 1130,
       "bild": ""
     },
     {
       "id": 6,
       "kategorie": "smartphone",
       "marke": "samsung",
-      "name": "Samsung Galaxy S23",
-      "preis": 399,
+      "name": "iphone 17 pro 256gb",
+      "preis": 1030,
       "bild": ""
     },
     {
       "id": 7,
       "kategorie": "smartphone",
       "marke": "apple",
-      "name": "iPhone 14 128GB",
-      "preis": 499,
+      "name": "iPhone 16 pro max 512GB",
+      "preis": 750,
       "bild": ""
     },
     {
       "id": 8,
       "kategorie": "smartphone",
       "marke": "xiaomi",
-      "name": "Xiaomi 13",
-      "preis": 279,
+      "name": "iphone 15 pro max 256gb",
+      "preis": 600,
       "bild": ""
     },
     {
       "id": 9,
       "kategorie": "smartphone",
       "marke": "samsung",
-      "name": "Samsung Galaxy A35",
-      "preis": 179,
+      "name": "iphone 15 pro 256gb",
+      "preis": 520,
       "bild": ""
     },
     {
       "id": 10,
       "kategorie": "smartphone",
       "marke": "apple",
-      "name": "iPhone 11 64GB",
-      "preis": 199,
+      "name": "iphone 15 128gb",
+      "preis": 470,
       "bild": ""
     },
     {
       "id": 21,
       "kategorie": "smartphone",
       "marke": "apple",
-      "name": "iPhone 15 128GB",
-      "preis": 599,
+      "name": "iPhone 15 a1 offen 128gb",
+      "preis": 400,
       "bild": ""
     },
     {
       "id": 22,
       "kategorie": "smartphone",
       "marke": "apple",
-      "name": "iPhone 15 Pro 256GB",
-      "preis": 799,
+      "name": "iPhone 14 pro max 256gb",
+      "preis": 480,
       "bild": ""
     },
     {
       "id": 23,
       "kategorie": "smartphone",
       "marke": "apple",
-      "name": "iPhone 16 128GB",
-      "preis": 849,
+      "name": "iPhone 14 pro 128gb",
+      "preis": 450,
       "bild": ""
     },
     {
       "id": 24,
       "kategorie": "smartphone",
       "marke": "apple",
-      "name": "iPhone XS 64GB",
-      "preis": 149,
+      "name": "iPhone 14 128gb",
+      "preis": 400,
       "bild": ""
     },
     {
       "id": 25,
       "kategorie": "smartphone",
       "marke": "apple",
-      "name": "iPhone SE 2022 64GB",
-      "preis": 179,
+      "name": "iphone 13 pro max 256gb",
+      "preis": 450,
       "bild": ""
     },
     {
       "id": 26,
       "kategorie": "smartphone",
       "marke": "apple",
-      "name": "iPhone 12 Pro 128GB",
-      "preis": 329,
+      "name": "iPhone 13 pro",
+      "preis": 349,
       "bild": ""
     },
     {
       "id": 27,
       "kategorie": "smartphone",
       "marke": "samsung",
-      "name": "Samsung Galaxy S24",
-      "preis": 599,
+      "name": "iphone 12 pro 128gb                   ",
+      "preis": 249,
       "bild": ""
     },
     {
       "id": 28,
       "kategorie": "smartphone",
       "marke": "xiaomi",
-      "name": "Xiaomi Redmi Note 13",
+      "name": "iphone 12",
       "preis": 199,
       "bild": ""
     },
@@ -367,37 +367,37 @@
       "id": 29,
       "kategorie": "smartphone",
       "marke": "xiaomi",
-      "name": "Xiaomi 12 Pro 256GB",
-      "preis": 349,
+      "name": "iphone 12 mini 128gb",
+      "preis": 200,
       "bild": ""
     },
     {
       "id": 30,
       "kategorie": "smartphone",
       "marke": "xiaomi",
-      "name": "Xiaomi Redmi 13C 128GB",
-      "preis": 129,
+      "name": "iphone 11 pro max 512gb",
+      "preis": 250,
       "bild": ""
     },
     {
       "id": 11,
       "kategorie": "zubehoer",
       "name": "USB-C Kabel 1m",
-      "preis": 9,
+      "preis": 10,
       "bild": ""
     },
     {
       "id": 12,
       "kategorie": "zubehoer",
       "name": "iPhone Case transparent",
-      "preis": 12,
+      "preis": 10,
       "bild": ""
     },
     {
       "id": 13,
       "kategorie": "zubehoer",
       "name": "Samsung Case schwarz",
-      "preis": 12,
+      "preis": 10,
       "bild": ""
     },
     {
@@ -418,7 +418,7 @@
       "id": 16,
       "kategorie": "zubehoer",
       "name": "Bluetooth Kopfhörer",
-      "preis": 29,
+      "preis": 50,
       "bild": ""
     },
     {
@@ -432,14 +432,14 @@
       "id": 18,
       "kategorie": "zubehoer",
       "name": "Powerbank 10000mAh",
-      "preis": 25,
+      "preis": 30,
       "bild": ""
     },
     {
       "id": 19,
       "kategorie": "zubehoer",
-      "name": "Lightning Kabel 1m",
-      "preis": 9,
+      "name": "Ruto wifi box ",
+      "preis": 40,
       "bild": ""
     },
     {
